@@ -1,3 +1,18 @@
+<!-- Co zrobię jutro: -->
+Dalsza praca nad TemplateView (proste menu, przełączanie języka, przełączenie themy, zbudować custom theme z nowym custom colorem), który będzie miał jakiś nagłówek i Footer
+Wstawię do niego komponent Home View i About View
+<!-- Co zrobię pojutrze: -->
+Dopracowanie template View:
+- testy jednostkowe
+- atomic design
+- CSSy i ABEM
+- Typescript
+- Storybook
+
+Trzeba doczytać o unit testach komponentów view: view test utils
+Zastanowić się czy nie chcę spróbować robic TDD.
+<!--  -->
+
 Ctr + shift + P: Typescript: restart TS server
 docker compose up -d --build
 docker exec -it vite_docker sh
@@ -34,7 +49,9 @@ https://imarc-boilerplate.netlify.app/pattern-library/docs/abem.html
 https://css-tricks.com/abem-useful-adaptation-bem/
 Doczytać o storybook, jak się ma (czy może współgrać z cypressem), wprowadzić w życie
 https://storybook.js.org/
+Ogarnąć pug i dodać do projektu!
 
+Icons: https://pictogrammers.com/library/mdi/
 <!-- dalszy workflow iteracyjnie:
 1. Tworzysz pierwszy ficzer tak jak umiesz
 1*. Może wymagać doczytania/poprawy/dorobienia: PINIA, ROUTER, VEE-Validate
@@ -42,12 +59,15 @@ https://storybook.js.org/
 3. Uzupełniasz o typescripta
 4. Poprawiasz klasy: ABEM
 5. Dodajesz Unit testy 
-6. Koniec ficzera, można brać kolejny: idziemy do pkt 1 -->
+6. Storybook
+7. Koniec ficzera, można brać kolejny: idziemy do pkt 1 -->
 
 <!-- Po jednym/dwóch ficzerach plan co dalej:
 1. Wnioski po dotychczasowej pracy- coś do ToDo?
 2. Może dorobienie stories? Może już tu trzeba doczytać jak to się ma do Cypressa -->
 
+<!-- dodać theme do vuetify -->
+<!-- na koniec pracy pousuwać Old pliki -->
 <!-- konfiguracja eslinta, czy coś zmieniamy -->
 <!-- co można zrobić z prettier -->
 <!-- na końcu dependabota -->
@@ -57,7 +77,7 @@ https://storybook.js.org/
 
 <!-- aplikacja właściwa: -->
 <!-- obsługa 429 too many requests w public apis -->
-
+<!-- zacnie zrobione komponenty Ikonek OldIcon ze względu na prostotę sterowania kolorem, choć może można by zrobić je jeszcze zacniej ;) Stwórz komponenty ikonek biorąc najlepsze doświadczenia stąd i z dotychczasowych projektów i z vuetifajowych ikonek-->
 # dashboard-public-api
 
 This template should help get you started developing with Vue 3 in Vite.
