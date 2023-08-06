@@ -1,13 +1,7 @@
 <!-- Co zrobię jutro: -->
-Dalsza praca nad TemplateView (proste menu, przełączanie języka, przełączenie themy, zbudować custom theme z nowym custom colorem), który będzie miał jakiś nagłówek i Footer
-Wstawię do niego komponent Home View i About View
+Praca nad headerem. Pkt 2.
 <!-- Co zrobię pojutrze: -->
-Dopracowanie template View:
-- testy jednostkowe
-- atomic design
-- CSSy i ABEM
-- Typescript
-- Storybook
+Poprawa struktury
 
 Trzeba doczytać o unit testach komponentów view: view test utils
 Zastanowić się czy nie chcę spróbować robic TDD.
@@ -25,6 +19,32 @@ dodano zmienne środowiskowe .env
 Dodano vee-validate z customowymi komunikatami błędów.
 Dodano axiosa
 https://enetoolveda.medium.com/how-to-use-axios-typescript-like-a-pro-7c882f71e34a
+
+<!-- dalszy workflow iteracyjnie:
+1. Tworzysz ficzer tak jak umiesz. Czy ma wszystkie funkcjonalności, które chcesz mieć?
+(Ikony: https://pictogrammers.com/library/mdi/
+Pinia:
+Router:
+Vee-validate:
+Yup:)
+
+2, Czy jest git responsywny?
+(Ma się dobrze wyświetlać od 300px)
+
+3. Poprawiasz strukturę: Atomic?
+(https://medium.com/@vuefront/finding-the-perfect-component-file-structure-for-out-vuejs-app-b808a69dacac
+struktura wzorować się na tym:
+https://github.com/vuefront/vuefront
+https://github.com/DariaYeremina/comments-app/blob/master/src/components/molecules/VAddComment.vue)
+
+4. Uzupełniasz o typescripta?
+(wzoruje się na: https://github.com/PiotrWasak/public-api/tree/master/src/types i vuefront z pkt3)
+
+5. Poprawiasz klasy: ABEM?
+( https://imarc-boilerplate.netlify.app/pattern-library/docs/abem.html
+https://css-tricks.com/abem-useful-adaptation-bem/)
+
+6. Dodajesz Unit testy?
 Unit testy zrobimy z vitestem (polecane i utrzymywane przez vue team). (for components or composables that render headlessly (e.g. the useFavicon function in VueUse). Components and DOM can be tested using @vue/test-utils.) To co testujesz: helpery/komponenty/composables stworzysz podfoldery na ficzery i tam będę wrzucał testy
 End to end zrobimy w cypressie na końcu. Docelowa struktura wtedy będzie zaprojektowana
 Możesz też zrobić przykładowy jeden unit test w cypress
@@ -33,38 +53,15 @@ helpery,
 komponenty,
 composables,
 pinia store,
-na types wzorować się będę na tym:
-https://github.com/PiotrWasak/public-api/tree/master/src/types
-struktura wzorować się na tym:
-https://github.com/vuefront/vuefront
-https://github.com/DariaYeremina/comments-app/blob/master/src/components/molecules/VAddComment.vue
 
-czyli folder na typy i tam rozbite na pliki
-Ten mały przykład zrobię na bazie:
-Atomic design: 
-https://medium.com/@vuefront/finding-the-perfect-component-file-structure-for-out-vuejs-app-b808a69dacac
-przykład: https://github.com/vuefront/vuefront/blob/master/src/components/atoms/textarea/textarea.vue
-CSS zrobię na ABEM:
-https://imarc-boilerplate.netlify.app/pattern-library/docs/abem.html
-https://css-tricks.com/abem-useful-adaptation-bem/
-Doczytać o storybook, jak się ma (czy może współgrać z cypressem), wprowadzić w życie
-https://storybook.js.org/
-Ogarnąć pug i dodać do projektu!
+7. Storybook?
+https://storybook.js.org/ (czy może współgrać z cypressem?)
 
-Icons: https://pictogrammers.com/library/mdi/
-<!-- dalszy workflow iteracyjnie:
-1. Tworzysz pierwszy ficzer tak jak umiesz
-1*. Może wymagać doczytania/poprawy/dorobienia: PINIA, ROUTER, VEE-Validate
-2. Poprawiasz strukturę: Atomic
-3. Uzupełniasz o typescripta
-4. Poprawiasz klasy: ABEM
-5. Dodajesz Unit testy 
-6. Storybook
-7. Koniec ficzera, można brać kolejny: idziemy do pkt 1 -->
+8. Prettier
+9. Koniec ficzera, można brać kolejny: idziemy do pkt 1 -->
 
 <!-- Po jednym/dwóch ficzerach plan co dalej:
-1. Wnioski po dotychczasowej pracy- coś do ToDo?
-2. Może dorobienie stories? Może już tu trzeba doczytać jak to się ma do Cypressa -->
+1. Wnioski po dotychczasowej pracy- coś do ToDo? -->
 
 <!-- dodać theme do vuetify -->
 <!-- na koniec pracy pousuwać Old pliki -->
@@ -74,6 +71,7 @@ Icons: https://pictogrammers.com/library/mdi/
 <!-- dodanie i konfiguracja Sentry? -->
 <!-- przykład css i Bema -->
 <!-- ogarnąć ładne Readmi -->
+pouczyć się pug
 
 <!-- aplikacja właściwa: -->
 <!-- obsługa 429 too many requests w public apis -->
@@ -124,8 +122,6 @@ npm run build
 ```sh
 npm run test:unit
 ```
-
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
 
 ```sh
 npm run test:e2e:dev
