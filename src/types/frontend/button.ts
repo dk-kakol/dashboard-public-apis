@@ -1,0 +1,1 @@
+export type ButtonDensity = 'compact' | 'comfortable' | 'default';

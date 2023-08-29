@@ -1,9 +1,9 @@
 import Http from '@/services/http/index';
 import Endpoints from '@/services/http/endpoints';
+import { ApiEndpoints, type EntriesResponse } from '@/types';
 
-// tutaj obsługa typescripta lepsiejsza
 export default {
-  getList() {
-    return Http.get(Endpoints.get('list'));
+  fetchList() {
+    return Http.get<EntriesResponse>(Endpoints.get(ApiEndpoints.list));
   }
 };

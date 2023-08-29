@@ -1,31 +1,13 @@
-interface endpointType {
-  [key: string]: string;
-}
-
-interface paramsType {
-  [key: string]: any;
-}
-
+import type { EndpointParams, ApiEndpoints } from "@/types";
 class Endpoints {
-  endpoints: endpointType;
   apiPrefix: string;
 
   constructor() {
-    this.endpoints = {
-      list: 'entries',
-      random: 'random',
-      categories: 'categories',
-      testError: 'test/:id'
-    };
     this.apiPrefix = import.meta.env.VITE_APP_API_URL;
   }
 
-  get(endpointLabel: string, params?: paramsType): string | never {
-    if (this.endpoints[endpointLabel] === undefined) {
-      throw new Error('undefined api path');
-    }
-
-    let url = this.endpoints[endpointLabel];
+  get(endpointLabel: ApiEndpoints, params?: EndpointParams): string {
+    let url = endpointLabel as string;
 
     if (typeof params === 'object') {
       Object.keys(params).forEach((param) => {

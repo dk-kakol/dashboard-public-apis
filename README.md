@@ -1,10 +1,9 @@
 <!-- Co zrobię jutro: -->
-Praca nad headerem. Pkt 2.
-<!-- Co zrobię pojutrze: -->
-Poprawa struktury
+Przeczytać jeszcze raz o BEM i ABEM. Może w organiźmie Headera dodać klasy
+wg ABEM zeby był jakiś prosty przykład
 
-Trzeba doczytać o unit testach komponentów view: view test utils
-Zastanowić się czy nie chcę spróbować robic TDD.
+<!-- Co zrobię pojutrze: -->
+
 <!--  -->
 
 Ctr + shift + P: Typescript: restart TS server
@@ -36,13 +35,31 @@ Yup:)
 struktura wzorować się na tym:
 https://github.com/vuefront/vuefront
 https://github.com/DariaYeremina/comments-app/blob/master/src/components/molecules/VAddComment.vue)
+WNIOSKI:
+a) atomy:
+niepodzielny najmniejszy komponent
+mają 1 poziom folderów
+nie ma biznesowej logiki, może mieć logikę dotyczącą wyglądu (różne warianty)
+każdy komponent vuetify rozbijam na Atomic Design (robię wrappery)
+(https://dev.to/timothyokooboh/vue-js-how-to-maintain-atomic-design-principles-when-using-vendor-components-2hf0)
+b) molekuły
+mała kombinacja atomów i innych molekułów
+mogą mieć logikę dotyczącą wyglądu, ale nie mają logiki biznesowej
+mają 1 poziom folderów
+c) organizmy
+kombinacja atomów, molekułów i innych organizmów
+może zacząć mieć logikę biznesową
+1 poziom folderów
+mogą zacząć mieć pobieranie danych (GraphQL/korzystanie z endpointów)
+d) templatki
+nie mają jeszcze właściwych danych. Layout dla page'a
 
-4. Uzupełniasz o typescripta?
+4. Uzupełniasz o typescripta (+yup)?
 (wzoruje się na: https://github.com/PiotrWasak/public-api/tree/master/src/types i vuefront z pkt3)
 
 5. Poprawiasz klasy: ABEM?
 ( https://imarc-boilerplate.netlify.app/pattern-library/docs/abem.html
-https://css-tricks.com/abem-useful-adaptation-bem/)
+https://css-tricks.com/abem-useful-adaptation-bem/ )
 
 6. Dodajesz Unit testy?
 Unit testy zrobimy z vitestem (polecane i utrzymywane przez vue team). (for components or composables that render headlessly (e.g. the useFavicon function in VueUse). Components and DOM can be tested using @vue/test-utils.) To co testujesz: helpery/komponenty/composables stworzysz podfoldery na ficzery i tam będę wrzucał testy

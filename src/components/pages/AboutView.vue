@@ -13,4 +13,9 @@
 
 <script setup lang="ts">
 import DefaultTemplate from '@/components/templates/DefaultTemplate.vue';
+import publicApis from '@/services/http/api/publicApis';
+
+publicApis.fetchList().then((data) => {
+  console.log(data);
+});
 </script>

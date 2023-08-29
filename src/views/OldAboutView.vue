@@ -16,7 +16,7 @@
 import { useField } from 'vee-validate';
 import publicApis from '@/services/http/api/publicApis';
 
-publicApis.getList().then((data) => {
+publicApis.fetchList().then((data) => {
   console.log(data);
 });
 const { errorMessage, meta, value, handleChange } = useField<string>(
