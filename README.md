@@ -1,9 +1,13 @@
 <!-- Co zrobię jutro: -->
-Przeczytać jeszcze raz o BEM i ABEM. Może w organiźmie Headera dodać klasy
-wg ABEM zeby był jakiś prosty przykład
+Czytać po kolei https://test-utils.vuejs.org/guide/ i dodać analogiczne testy dla tego co mam.
+Przeczytaj https://lmiller1990.github.io/vue-testing-handbook/v3/ - czy jest coś nowego
+w unit testach pomyśleć co wyciągnąć do globalnego configa/ beforeEacha i jak zrobić żeby nie było boilerplate
+Przejrzeć istniejące pliki i zastanowić się jakie jeszcze testy dodać
 
 <!-- Co zrobię pojutrze: -->
-
+Kolejny ficzer który wezmę na tapetę:
+pobieranie public apis i wyświetlanie ich. To zaangażuje store, axiosa
+Posprzątać stare wywołania axiosa.
 <!--  -->
 
 Ctr + shift + P: Typescript: restart TS server
@@ -19,6 +23,7 @@ Dodano vee-validate z customowymi komunikatami błędów.
 Dodano axiosa
 https://enetoolveda.medium.com/how-to-use-axios-typescript-like-a-pro-7c882f71e34a
 
+Jak będziesz potrzebował pierwornych plików to masz projekt test z postawionym środowiskiem.
 <!-- dalszy workflow iteracyjnie:
 1. Tworzysz ficzer tak jak umiesz. Czy ma wszystkie funkcjonalności, które chcesz mieć?
 (Ikony: https://pictogrammers.com/library/mdi/
@@ -70,6 +75,7 @@ helpery,
 komponenty,
 composables,
 pinia store,
+https://test-utils.vuejs.org/
 
 7. Storybook?
 https://storybook.js.org/ (czy może współgrać z cypressem?)
@@ -80,19 +86,23 @@ https://storybook.js.org/ (czy może współgrać z cypressem?)
 <!-- Po jednym/dwóch ficzerach plan co dalej:
 1. Wnioski po dotychczasowej pracy- coś do ToDo? -->
 
-<!-- dodać theme do vuetify -->
-<!-- na koniec pracy pousuwać Old pliki -->
-<!-- konfiguracja eslinta, czy coś zmieniamy -->
-<!-- co można zrobić z prettier -->
-<!-- na końcu dependabota -->
-<!-- dodanie i konfiguracja Sentry? -->
-<!-- przykład css i Bema -->
-<!-- ogarnąć ładne Readmi -->
-pouczyć się pug
-
-<!-- aplikacja właściwa: -->
-<!-- obsługa 429 too many requests w public apis -->
-<!-- zacnie zrobione komponenty Ikonek OldIcon ze względu na prostotę sterowania kolorem, choć może można by zrobić je jeszcze zacniej ;) Stwórz komponenty ikonek biorąc najlepsze doświadczenia stąd i z dotychczasowych projektów i z vuetifajowych ikonek-->
+<!-- Wnioski różne -->
+-obsługa 429 too many requests w public apis
+-zacnie zrobione komponenty Ikonek OldIcon ze względu na prostotę sterowania kolorem, choć może można by zrobić je jeszcze zacniej ;) Stwórz komponenty ikonek biorąc najlepsze doświadczenia stąd i z dotychczasowych projektów i z vuetifajowych ikonek
+-dodać theme do vuetify
+-konfiguracja eslinta, czy coś zmieniamy
+-co można zrobić z prettier
+-na końcu dependabota
+-dodanie i konfiguracja Sentry?
+-ogarnąć ładne Readmi
+-pouczyć się pug
+-możesz sobie poćwiczyć transition
+-możesz przeglądnać dokumentację Vue, Pinii, Routera, Vue test utils, Storybooka, Typescripta czy jest jakiś ficzer który jeszcze chcesz dodać/obsłużyć żeby mieć przykład na przyszłość
+-z useI18n można wyciągnąć wszystko z Composer Instance
+// const { t, d, n, tm, locale, availableLocales, getLocaleMessages } = useI18n();
+- na koniec możesz pomyśleć o dodaniu różnych funkcji z vue-i18n, np:
+typescript support, date and number formatting, pluralization (tc w legacy, teraz t), lazy loading, przykład znaku specjalnego, przykład linked messages, built-in modifiers, literal interpolation na znaki specjalne
+<!--  -->
 # dashboard-public-api
 
 This template should help get you started developing with Vue 3 in Vite.

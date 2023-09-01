@@ -5,5 +5,13 @@
   "menu": {
     "aboutTitle": "O projekcie",
     "homeTitle": "Lista"
-  }
+  },
+  "testArray": [
+    { "title": "a" },
+    { "title": "b" }
+  ],
+  "secondTestArray": [
+    "a",
+    "b"
+  ]
 }

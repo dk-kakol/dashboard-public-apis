@@ -1,17 +1,19 @@
 <template>
   <v-app-bar>
     <template v-slot:prepend>
-      <v-app-bar-nav-icon icon="mdi-menu" @click.stop="drawer = !drawer" :size="defaultSize">
+      <v-app-bar-nav-icon
+        icon="mdi-menu" @click.stop="drawer = !drawer" :size="defaultSize"
+        data-test="o-header__menuButton">
       </v-app-bar-nav-icon>
     </template>
 
     <v-app-bar-title class="d-none d-sm-block">{{ $t('template.header.title') }}</v-app-bar-title>
-
     <template v-slot:append>
       <Button icon v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`"
         @click="$i18n.locale = locale"
         :variant="$i18n.locale === locale ? 'tonal' : 'text'"
-        :size="defaultSize">
+        :size="defaultSize"
+        data-test="o-header__localeButton">
         {{ locale }}
       </Button>
       <Button @click="toggleTheme" icon>
@@ -20,7 +22,8 @@
     </template>
   </v-app-bar>
 
-  <NavigationDrawer :items="items" v-model="drawer"></NavigationDrawer>
+  <NavigationDrawer :items="items" v-model="drawer"
+    data-test="o-header__navigationDrawer"></NavigationDrawer>
 </template>
 
 <script setup lang="ts">
