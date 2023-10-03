@@ -7,6 +7,7 @@
         :title="$t(item?.title)"
         :to="item?.route"
         class="m-navigationDrawer__listItem -overwritePadding"
+        data-test="m-navigationDrawer__listItem"
         ></v-list-item>
     </v-list>
   </v-navigation-drawer>

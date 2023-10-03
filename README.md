@@ -1,6 +1,4 @@
 <!-- Co zrobię jutro: -->
-Czytać po kolei https://test-utils.vuejs.org/guide/ i dodać analogiczne testy dla tego co mam.
-Przeczytaj https://lmiller1990.github.io/vue-testing-handbook/v3/ - czy jest coś nowego
 w unit testach pomyśleć co wyciągnąć do globalnego configa/ beforeEacha i jak zrobić żeby nie było boilerplate
 Przejrzeć istniejące pliki i zastanowić się jakie jeszcze testy dodać
 

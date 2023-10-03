@@ -13,7 +13,10 @@ export default mergeConfig(
       root: fileURLToPath(new URL('./', import.meta.url)),
       deps: {
         inline: ['vuetify'],
-      }
+      },
+      setupFiles: ['__mocks__/index'],
+      forceRerunTriggers: [
+        ...configDefaults.forceRerunTriggers, '**/__mocks__/**'],
     }
   })
 )

@@ -3,7 +3,6 @@
   <v-main>
     <slot name="body"></slot>
   </v-main>
-
   <v-footer></v-footer>
 </template>
 
