@@ -42,7 +42,6 @@ test('allows authenticated user to edit a post', async () => {
       id: 1
     }
   }))
-
   const push = vi.fn()
   const mockedUseRouter = useRouter as Mock;
   mockedUseRouter.mockImplementationOnce(() => ({
@@ -54,7 +53,8 @@ test('allows authenticated user to edit a post', async () => {
       isAuthenticated: true
     },
     global: {
-      stubs: ["router-link", "router-view"], // Stubs for router-link and router-view in case they're rendered in your template
+      // Stubs for router-link and router-view in case they're rendered in your template:
+      stubs: ["router-link", "router-view"],
     }
   })
 
@@ -71,7 +71,6 @@ test('redirect an unauthenticated user to 404', async () => {
       id: 1
     }
   }))
-
   const push = vi.fn()
   const mockedUseRouter = useRouter as Mock;
   mockedUseRouter.mockImplementationOnce(() => ({
@@ -87,7 +86,7 @@ test('redirect an unauthenticated user to 404', async () => {
       isAuthenticated: false
     },
     global: {
-      stubs: ["router-link", "router-view"], // Stubs for router-link and router-view in case they're rendered in your template
+      stubs: ["router-link", "router-view"],
     }
   })
 
@@ -116,7 +115,7 @@ test('inny sposób: allows authenticated user to edit a post', async () => {
       isAuthenticated: true
     },
     global: {
-      stubs: ["router-link", "router-view"], // Stubs for router-link and router-view in case they're rendered in your template
+      stubs: ["router-link", "router-view"],
     }
   })
 

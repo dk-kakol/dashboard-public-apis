@@ -37,7 +37,8 @@ export default <Params, Data>(
         componentToMount,
       },
       plugins: [vuetify, i18n, createTestingPinia(piniaConfig)],
-      mocks: { ...options?.global?.mocks }
+      mocks: { ...options?.global?.mocks },
+      stubs: ["router-link", "router-view"],
     },
     props: { ...options?.props },
     slots: { ...options?.slots },

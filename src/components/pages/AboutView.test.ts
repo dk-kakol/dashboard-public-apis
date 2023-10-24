@@ -33,6 +33,10 @@ describe('About View', () => {
   });
 
   it('should render count from publicFetch', async () => {
+    // stubActions:
+    // When set to false, actions are only spied, but they will still get executed
+    // When set to true, actions will be replaced with spies, resulting in their code not being executed. 
+    // Defaults to true. 
     wrapper = createWrapper(AboutView, undefined, { stubActions: false } );
     await flushPromises();
     await nextTick();

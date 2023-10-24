@@ -1,11 +1,9 @@
 <!-- Co zrobię jutro: -->
-w unit testach pomyśleć co wyciągnąć do globalnego configa/ beforeEacha i jak zrobić żeby nie było boilerplate
-Przejrzeć istniejące pliki i zastanowić się jakie jeszcze testy dodać
-
-<!-- Co zrobię pojutrze: -->
 Kolejny ficzer który wezmę na tapetę:
 pobieranie public apis i wyświetlanie ich. To zaangażuje store, axiosa
 Posprzątać stare wywołania axiosa.
+
+<!-- Co zrobię pojutrze: -->
 <!--  -->
 
 Ctr + shift + P: Typescript: restart TS server
