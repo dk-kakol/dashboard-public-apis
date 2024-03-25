@@ -21,6 +21,7 @@ pobieranie public apis i wyświetlanie ich. To zaangażuje store, axiosa
 Posprzątać stare wywołania axiosa.
 
 <!-- Co zrobię pojutrze: -->
+Dodać husky do projektu
 Filtrowanie
 Jakiś sprytny health check and mock backend if unavailable
 About Page - opisać technologie i health check
