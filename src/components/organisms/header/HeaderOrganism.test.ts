@@ -1,11 +1,11 @@
 import { createWrapper, i18n, messages, type VueWrapper } from '@/tests/utils';
-import Header from '@/components/organisms/header/Header.vue';
+import HeaderOrganism from '@/components/organisms/header/HeaderOrganism.vue';
 
 let wrapper: VueWrapper;
 const defaultLocale: string = i18n.global.locale.value;
 
 beforeAll(() => {
-  wrapper = createWrapper(Header, {
+  wrapper = createWrapper(HeaderOrganism, {
     // global: {
     //   mocks: {
     //     $t: (msg: string) => msg,

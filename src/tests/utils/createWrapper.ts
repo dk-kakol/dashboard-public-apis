@@ -5,6 +5,7 @@ import * as components from 'vuetify/components';
 import * as directives from 'vuetify/directives';
 import i18n from '@/plugins/i18n';
 import { createTestingPinia, type TestingOptions } from '@pinia/testing'
+import { orphans } from '@/directives/orphans/orphans'
 
 const vuetify = createVuetify({
   components,
@@ -39,6 +40,9 @@ export default <Params, Data>(
       plugins: [vuetify, i18n, createTestingPinia(piniaConfig)],
       mocks: { ...options?.global?.mocks },
       stubs: ["router-link", "router-view"],
+      directives: {
+        Orphans: orphans
+      }
     },
     props: { ...options?.props },
     slots: { ...options?.slots },

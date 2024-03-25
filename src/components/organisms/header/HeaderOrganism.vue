@@ -9,16 +9,16 @@
 
     <v-app-bar-title class="d-none d-sm-block">{{ $t('template.header.title') }}</v-app-bar-title>
     <template v-slot:append>
-      <Button icon v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`"
+      <ButtonAtom icon v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`"
         @click="$i18n.locale = locale"
         :variant="$i18n.locale === locale ? 'tonal' : 'text'"
         :size="defaultSize"
         data-test="o-header__localeButton">
         {{ locale }}
-      </Button>
-      <Button @click="toggleTheme" icon>
+      </ButtonAtom>
+      <ButtonAtom @click="toggleTheme" icon>
         <Icon icon="mdi-theme-light-dark"></Icon>
-      </Button>
+      </ButtonAtom>
     </template>
   </v-app-bar>
 
@@ -28,7 +28,7 @@
 
 <script setup lang="ts">
 import Icon from '@/components/atoms/icons/Icon.vue';
-import Button from '@/components/atoms/buttons/Button.vue';
+import ButtonAtom from '@/components/atoms/buttons/ButtonAtom.vue';
 
 import NavigationDrawer from '@/components/molecules/header/NavigationDrawer.vue';
 

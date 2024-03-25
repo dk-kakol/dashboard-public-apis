@@ -1,5 +1,5 @@
-import type { InferType } from 'yup';
-import type { entrySchema, entriesResponseSchema } from '@/services/http/schemas/entries';
+import type { z } from 'zod'
+import type { entrySchema, entriesSchema, entriesResponseSchema } from '@/services/http/schemas/entries';
 
 export enum Cors {
     No = "no",
@@ -16,6 +16,10 @@ export enum Auth {
     XMashapeKey = "X-Mashape-Key",
 }
 
-export interface Entry extends InferType<typeof entrySchema>{};
+export type Entry = z.infer<typeof entrySchema>;
 
-export interface EntriesResponse extends InferType<typeof entriesResponseSchema>{};
+export type EntryKeys = keyof Entry;
+
+export type Entries = z.infer<typeof entriesSchema>;
+
+export type EntriesResponse = z.infer<typeof entriesResponseSchema>;

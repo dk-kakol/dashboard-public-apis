@@ -1,0 +1,17 @@
+{
+  "mobile": {
+    "api": "Api",
+    "details": "Szczegóły",
+    "description": "Opis"
+  },
+  "keys": {
+    "api": "Api",
+    "description": "Opis",
+    "auth": "Autoryz.",
+    "https": "Https",
+    "cors": "Cors",
+    "category": "Kategoria",
+    "link": "Link"
+  },
+  "noResult": "Brak wyników"
+}

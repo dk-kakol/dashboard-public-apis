@@ -1,17 +1,29 @@
-import { object, number, string, boolean, mixed, array } from 'yup';
-import { Cors, Auth } from '@/types';
+import { z } from 'zod'
+// import { Cors, Auth } from '@/types';
 
-export const entrySchema = object({
-  api: string().required(),
-  description: string().required(),
-  auth: mixed<Auth>().oneOf(Object.values(Auth)).defined(),
-  https: boolean().defined(),
-  cors: mixed<Cors>().oneOf(Object.values(Cors)).defined(),
-  link: string().required(),
-  category: string().required(),
+// export const entrySchema = z.object({
+//   API: z.string(),
+//   Description: z.string(),
+//   Auth: z.nativeEnum(Auth),
+//   HTTPS: z.boolean(),
+//   Cors: z.nativeEnum(Cors),
+//   Link: z.string(),
+//   Category: z.string(),
+// });
+
+export const entrySchema = z.object({
+  API: z.string(),
+  Description: z.string(),
+  Auth: z.enum(["apiKey", "", "OAuth", "User-Agent", "X-Mashape-Key"]),
+  HTTPS: z.boolean(),
+  Cors: z.enum(["no", "unknown", "unkown", "yes"]),
+  Link: z.string(),
+  Category: z.string(),
 });
 
-export const entriesResponseSchema = object({
-  count: number(),
-  entries: array(entrySchema).required(),
+export const entriesSchema = z.array(entrySchema);
+
+export const entriesResponseSchema = z.object({
+  count: z.number(),
+  entries: entriesSchema
 });

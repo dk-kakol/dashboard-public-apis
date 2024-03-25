@@ -1,16 +1,16 @@
-import Button from '@/components/atoms/buttons/Button.vue';
+import ButtonAtom from '@/components/atoms/buttons/ButtonAtom.vue';
 import createWrapper from '@/tests/utils/createWrapper';
 
 describe('Button Atom', () => {
   it('should render properly', () => {
-    const wrapper = createWrapper(Button);
+    const wrapper = createWrapper(ButtonAtom);
     const button = wrapper.find('[type="button"]');
 
     expect(button.exists()).toBe(true);
   });
 
   it('should emmit click event properly', () => {
-    const wrapper = createWrapper(Button);
+    const wrapper = createWrapper(ButtonAtom);
 
     const button = wrapper.find('[type="button"]');
     button.trigger('click');
@@ -19,7 +19,7 @@ describe('Button Atom', () => {
   });
 
   it('should set density property on vuetify button component from incoming props', async () => {
-    const wrapper = createWrapper(Button, {
+    const wrapper = createWrapper(ButtonAtom, {
       props: {
         density: "comfortable",
       },
@@ -32,7 +32,7 @@ describe('Button Atom', () => {
   });
 
   it('should set density to "compact" on vuetify button component when props undefined', () => {
-    const wrapper = createWrapper(Button);
+    const wrapper = createWrapper(ButtonAtom);
 
     const button = wrapper.findComponent({ name: 'v-btn' });
 
@@ -41,7 +41,7 @@ describe('Button Atom', () => {
 
   it('should render passed template in slot', () => {
     const slotText = 'ButtonText';
-    const wrapper = createWrapper(Button, {
+    const wrapper = createWrapper(ButtonAtom, {
       slots: {
         default: slotText,
       },

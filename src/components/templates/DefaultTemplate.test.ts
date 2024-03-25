@@ -14,7 +14,7 @@ beforeAll(() => {
 describe('Default template', () => {
   it('should render properly all sections', () => {
     const Sections = [
-      wrapper.findComponent({ name: 'Header' }),
+      wrapper.findComponent({ name: 'HeaderOrganism' }),
       wrapper.findComponent({ name: 'v-main' }),
       wrapper.findComponent({ name: 'v-footer' }),
     ];

@@ -6,6 +6,7 @@ import router from './router';
 import vuetify from '@/plugins/vuetify';
 import i18n from '@/plugins/i18n';
 import '@/plugins/vee-validate';
+import initDirectives from '@/directives';
 
 import './assets/main.scss';
 
@@ -16,5 +17,7 @@ app.use(router);
 
 app.use(vuetify);
 app.use(i18n);
+
+initDirectives(app);
 
 app.mount('#app');

@@ -1,24 +1,19 @@
 <template>
-  <DefaultTemplate>
-    <template #body>
-      <div class="text-h1 bg-amber-accent-4">Elo from Home View!</div>
-      <PublicApisList :items="apis"></PublicApisList>
-    </template>
-  </DefaultTemplate>
+  <PublicApisTable :apis></PublicApisTable>
+  <PaginationAtom :length="7" v-model="currentPagination"></PaginationAtom>
 </template>
 
 <script setup lang="ts">
-import DefaultTemplate from '@/components/templates/DefaultTemplate.vue';
-import PublicApisList from '@/components/organisms/publicApisList/PublicApisList.vue';
+import { ref } from 'vue';
+import PublicApisTable from '@/components/molecules/publicApisTable/PublicApisTable.vue';
+import PaginationAtom from '@/components/atoms/pagination/PaginationAtom.vue';
 import type { Entries } from '@/types';
-// import { Auth } from '@/types';
 
 const apis: Entries = [
   {
     "API": "AdoptAPet",
     "Description": "Resource to help get pets adopted",
     "Auth": "apiKey",
-    // "Auth": Auth.APIKey,
     "HTTPS": true,
     "Cors": "yes",
     "Link": "https://www.adoptapet.com/public/apis/pet_list.html",
@@ -34,4 +29,9 @@ const apis: Entries = [
     "Category": "Animals"
   }
 ];
+const currentPagination = ref<number>();
+
+// ten komponent będzie zbierał w całość wysłanie requesta o listę, 
+// requesta o filtry, paginacje
+// loaderki, etc.
 </script>

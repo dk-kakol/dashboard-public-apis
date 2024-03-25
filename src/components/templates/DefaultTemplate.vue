@@ -1,5 +1,5 @@
 <template>
-  <Header></Header>
+  <HeaderOrganism></HeaderOrganism>
   <v-main>
     <slot name="body"></slot>
   </v-main>
@@ -7,5 +7,5 @@
 </template>
 
 <script setup lang="ts">
-import Header from '@/components/organisms/header/Header.vue';
+import HeaderOrganism from '@/components/organisms/header/HeaderOrganism.vue';
 </script>

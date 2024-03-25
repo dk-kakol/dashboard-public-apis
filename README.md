@@ -1,9 +1,32 @@
+https://api.publicapis.org/
+https://pictogrammers.com/library/mdi/
 <!-- Co zrobię jutro: -->
+Następne dziś: atom loaderka
+Następne: PublicApisTable
+a) Dopicować layout (style/templatka)
+b) ogarnąć propsy i ts (przejść z yupa na zoda)
+c) Templatka na pustą tablicę
+d) Dodać unit testy
+e) skonfigurować storybooka
+f) dodać storybooka do PublicApisTable
+  
+1. Atomy tabelki (wrapper vuetify v-table), atom paginacji, atom loaderka?
+2. Molekuła tabelki (wygląd pod nasz projekt)
+3. Organizm listy: tabelka + loaderek + paginacja
+4. Wstawić w HomeView Organizm Listy z testowymi danymi
+5. W HomeView pobranie listy i przekazanie do Organizmu (skopiować walidację zodem)
+
 Kolejny ficzer który wezmę na tapetę:
 pobieranie public apis i wyświetlanie ich. To zaangażuje store, axiosa
 Posprzątać stare wywołania axiosa.
 
 <!-- Co zrobię pojutrze: -->
+Filtrowanie
+Jakiś sprytny health check and mock backend if unavailable
+About Page - opisać technologie i health check
+Update readme
+Deploy
+CR i fixy
 <!--  -->
 
 Ctr + shift + P: Typescript: restart TS server
@@ -55,7 +78,7 @@ mogą zacząć mieć pobieranie danych (GraphQL/korzystanie z endpointów)
 d) templatki
 nie mają jeszcze właściwych danych. Layout dla page'a
 
-4. Uzupełniasz o typescripta (+yup)?
+4. Uzupełniasz o typescripta (+zod)?
 (wzoruje się na: https://github.com/PiotrWasak/public-api/tree/master/src/types i vuefront z pkt3)
 
 5. Poprawiasz klasy: ABEM?
@@ -83,7 +106,12 @@ https://storybook.js.org/ (czy może współgrać z cypressem?)
 1. Wnioski po dotychczasowej pracy- coś do ToDo? -->
 
 <!-- Wnioski różne -->
+- z.enum() jest prostsze do użycia (w komponencie można od razu do property przypisać string i jest git)
+z.nativeEnum(MyEnum) umożliwia użycie wprost jakiegoś enuma, ale ma minus że żeby przypisać do property 
+musisz użyć tego enuma MyEnum.val. Uporządkować/udokumentować schemę Entry którą wersję przyjąć
 -obsługa 429 too many requests w public apis
+- ładniejsza nazwa kontenera niż vite_docker
+- helper function na znajdowanie data-tests
 -zacnie zrobione komponenty Ikonek OldIcon ze względu na prostotę sterowania kolorem, choć może można by zrobić je jeszcze zacniej ;) Stwórz komponenty ikonek biorąc najlepsze doświadczenia stąd i z dotychczasowych projektów i z vuetifajowych ikonek
 -dodać theme do vuetify
 -konfiguracja eslinta, czy coś zmieniamy
