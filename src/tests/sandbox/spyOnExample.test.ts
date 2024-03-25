@@ -22,3 +22,5 @@ describe('reading messages', () => {
     expect(messages.getLatest()).toEqual(itemForSpy);
   })
 });
+
+export {}

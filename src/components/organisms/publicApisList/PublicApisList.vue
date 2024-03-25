@@ -1,5 +1,5 @@
 <template>
-  <PublicApisTable :apis></PublicApisTable>
+  <PublicApisTable :apis="apis"></PublicApisTable>
   <PaginationAtom :length="7" v-model="currentPagination"></PaginationAtom>
 </template>
 
