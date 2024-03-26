@@ -80,6 +80,7 @@ import { useDisplay } from 'vuetify'
 import { isKey } from '@/helpers'
 
 type Props = {
+  /** Array of public apis */
   apis: Entries
 };
 

@@ -28,6 +28,15 @@ About Page - opisać technologie i health check
 Update readme
 Deploy
 CR i fixy
+
+Storybook todo:
+- przejrzeć nasz projekt co mamy ciekawego do przeniesienia
+- czy prawidłowo działają sloty
+- czy da się jakoś prosto zrobić zmianę motywu vuetify
+- czy da się jakoś prosto zrobić zmianę i18n
+- uzupełnić storybook dla komponentów które ich nie mają
+- przejrzeć dokumentację czy czegoś nie chcę użyć
+- opublikować storybook w chromecast?
 <!--  -->
 
 Ctr + shift + P: Typescript: restart TS server
@@ -42,6 +51,7 @@ dodano zmienne środowiskowe .env
 Dodano vee-validate z customowymi komunikatami błędów.
 Dodano axiosa
 https://enetoolveda.medium.com/how-to-use-axios-typescript-like-a-pro-7c882f71e34a
+Dodano storybooka
 
 Jak będziesz potrzebował pierwornych plików to masz projekt test z postawionym środowiskiem.
 <!-- dalszy workflow iteracyjnie:
