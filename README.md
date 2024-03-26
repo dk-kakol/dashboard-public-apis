@@ -32,10 +32,10 @@ CR i fixy
 Storybook todo:
 - przejrzeć nasz projekt co mamy ciekawego do przeniesienia
 - czy prawidłowo działają sloty
-- czy da się jakoś prosto zrobić zmianę motywu vuetify
-- czy da się jakoś prosto zrobić zmianę i18n
++ czy da się jakoś prosto zrobić zmianę motywu vuetify
++ czy da się jakoś prosto zrobić zmianę i18n
 - uzupełnić storybook dla komponentów które ich nie mają
-- przejrzeć dokumentację czy czegoś nie chcę użyć
+- przejrzeć dokumentację czy czegoś nie chcę użyć (i zrobić komponent na ficzery których nie użyłem?)
 - opublikować storybook w chromecast?
 <!--  -->
 
