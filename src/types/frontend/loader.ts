@@ -33,6 +33,6 @@ export type LoaderType =
   | 'text';
 
 export type LoaderProps = {
-  type: LoaderType[];
-  loading: boolean;
+  type?: LoaderType[];
+  loading?: boolean;
 };
