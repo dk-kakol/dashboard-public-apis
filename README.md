@@ -47,7 +47,7 @@ Dodano vee-validate z customowymi komunikatami błędów.
 Dodano axiosa
 https://enetoolveda.medium.com/how-to-use-axios-typescript-like-a-pro-7c882f71e34a
 Dodano storybooka
-Dodano huskyego. Przed każdym commitem lint, unit testy, prettier i type-
+Dodano huskyego. Przed każdym commitem lint, stylelint, unit testy, prettier i type-check
 
 Jak będziesz potrzebował pierwornych plików to masz projekt test z postawionym środowiskiem.
 <!-- dalszy workflow iteracyjnie:
