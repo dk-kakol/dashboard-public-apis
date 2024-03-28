@@ -51,7 +51,7 @@ const { count } = storeToRefs(testStore);
 // const showCount = computed(() => !!count.value);
 
 // const { t, tm, rt, locale } = useI18n({
-const { t, tm, rt } = useI18n({ 
+const { t, tm, rt } = useI18n({
   // inheritLocale działa, ale zostawiam useGlobal bo daje możliwość zmiany locale
   // inheritLocale: true
   useScope: 'global'
