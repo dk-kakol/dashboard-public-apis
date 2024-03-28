@@ -44,7 +44,7 @@ describe('PublicApisTable', () => {
   it('should render all fields header on desktop', () => {
     const header = wrapper.find('[data-test="m-publicApisTable__headTd"]');
 
-    for (const [_, value] of Object.entries(messages.pl.table.keys)) {
+    for (const [, value] of Object.entries(messages.pl.table.keys)) {
       expect(header.html()).toContain(value);
     }
   });

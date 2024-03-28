@@ -2,7 +2,6 @@ import type { Meta, StoryObj } from '@storybook/vue3';
 import LoaderAtom from './LoaderAtom.vue';
 import ButtonAtom from '@/components/atoms/buttons/ButtonAtom.vue';
 import { ref } from 'vue';
-import type { LoaderType } from '@/types';
 
 /** Loader Atom is initially in non loading state */
 const meta: Meta<typeof LoaderAtom> = {

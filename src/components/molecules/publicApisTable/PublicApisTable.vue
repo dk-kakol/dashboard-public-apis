@@ -34,7 +34,7 @@
           <DetailsTd :keyText="$t('table.keys.category')" :valueText="item.Category"></DetailsTd>
           <DetailsTd :keyText="$t('table.keys.link')">
             <ButtonAtom icon variant="text" :href="item.Link" target="_blank">
-              <Icon icon="mdi-open-in-new"></Icon>
+              <IconAtom icon="mdi-open-in-new"></IconAtom>
             </ButtonAtom>
           </DetailsTd>
         </td>
@@ -56,7 +56,7 @@
               target="_blank"
               data-test="m-publicApisTable__apisLinkButton"
             >
-              <Icon icon="mdi-open-in-new"></Icon>
+              <IconAtom icon="mdi-open-in-new"></IconAtom>
             </ButtonAtom>
             <div v-else v-orphans>{{ item[itemKey] }}</div>
           </div>
@@ -67,7 +67,7 @@
 </template>
 
 <script setup lang="ts">
-import Icon from '@/components/atoms/icons/Icon.vue';
+import IconAtom from '@/components/atoms/icons/IconAtom.vue';
 import TableAtom from '@/components/atoms/table/TableAtom.vue';
 import ButtonAtom from '@/components/atoms/buttons/ButtonAtom.vue';
 import DetailsTd from '@/components/molecules/publicApisTable/detailsTd/DetailsTd.vue';

@@ -24,7 +24,7 @@
         {{ locale }}
       </ButtonAtom>
       <ButtonAtom @click="toggleTheme" icon>
-        <Icon icon="mdi-theme-light-dark"></Icon>
+        <IconAtom icon="mdi-theme-light-dark"></IconAtom>
       </ButtonAtom>
     </template>
   </v-app-bar>
@@ -37,7 +37,7 @@
 </template>
 
 <script setup lang="ts">
-import Icon from '@/components/atoms/icons/Icon.vue';
+import IconAtom from '@/components/atoms/icons/IconAtom.vue';
 import ButtonAtom from '@/components/atoms/buttons/ButtonAtom.vue';
 
 import NavigationDrawer from '@/components/molecules/header/NavigationDrawer.vue';

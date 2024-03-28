@@ -2,7 +2,7 @@
   <v-navigation-drawer :value="$attrs.value" temporary width="110">
     <v-list nav density="compact">
       <v-list-item
-        v-for="item in items"
+        v-for="item in props.items"
         :key="item?.title"
         :title="$t(item?.title)"
         :to="item?.route"
