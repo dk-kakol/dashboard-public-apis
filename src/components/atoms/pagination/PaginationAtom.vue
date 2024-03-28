@@ -6,14 +6,15 @@
     :total-visible="props['total-visible']"
     next-icon="mdi-menu-right"
     prev-icon="mdi-menu-left"
-    v-bind="$attrs"></v-pagination>
+    v-bind="$attrs"
+  ></v-pagination>
 </template>
 
 <script setup lang="ts">
-  import type { PaginationAtomProps } from '@/types';
+import type { PaginationAtomProps } from '@/types';
 
-  type Props = PaginationAtomProps;
-  const props = defineProps<Props>();
+type Props = PaginationAtomProps;
+const props = defineProps<Props>();
 
-  const currentPage = defineModel<number>();
+const currentPage = defineModel<number>();
 </script>

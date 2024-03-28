@@ -1,7 +1,9 @@
 <template>
   <DefaultTemplate>
     <template #body>
-      <div class="text-h1 bg-amber-accent-4" data-test="p-aboutView__title">Elo from About View!</div>
+      <div class="text-h1 bg-amber-accent-4" data-test="p-aboutView__title">
+        Elo from About View!
+      </div>
       <div v-if="count" data-test="p-aboutView__countNumber">{{ count }}</div>
       <div>{{ t('template.header.title') }}</div>
       <div>***</div>
@@ -51,16 +53,14 @@ const showCount = computed(() => !!count.value);
 const { t, tm, rt, locale } = useI18n({
   // inheritLocale działa, ale zostawiam useGlobal bo daje możliwość zmiany locale
   // inheritLocale: true
-  useScope: 'global',
+  useScope: 'global'
 });
 interface TestArrayItem {
-  title: string,
+  title: string;
 }
 const testArray: TestArrayItem[] = tm('template.testArray');
 const secondTestArray: string[] = tm('template.secondTestArray');
 const templateLangs = tm('template');
 
 const currentPagination = ref<number>();
-
-
 </script>

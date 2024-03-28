@@ -1,4 +1,4 @@
-import responseInterceptor from "@/composables/responseInterceptor";
+import responseInterceptor from '@/composables/responseInterceptor';
 import type { AxiosError } from 'axios';
 
 describe('responseInterceptor', () => {

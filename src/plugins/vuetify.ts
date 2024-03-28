@@ -4,7 +4,7 @@ import '@mdi/font/css/materialdesignicons.css';
 
 import { createVuetify } from 'vuetify';
 import { aliases, fa } from 'vuetify/iconsets/fa';
-import { mdi } from 'vuetify/iconsets/mdi'
+import { mdi } from 'vuetify/iconsets/mdi';
 
 export default createVuetify({
   icons: {
@@ -12,7 +12,7 @@ export default createVuetify({
     aliases,
     sets: {
       fa,
-      mdi,
+      mdi
     }
   }
 });

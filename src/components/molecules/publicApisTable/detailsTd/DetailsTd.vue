@@ -14,8 +14,8 @@ import RowAtom from '@/components/atoms/row/RowAtom.vue';
 import ColAtom from '@/components/atoms/col/ColAtom.vue';
 
 type Props = {
-  keyText: string,
-  valueText?: string
-}
+  keyText: string;
+  valueText?: string;
+};
 const props = defineProps<Props>();
 </script>

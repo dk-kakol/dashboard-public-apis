@@ -1,20 +1,17 @@
 https://api.publicapis.org/
 https://pictogrammers.com/library/mdi/
-<!-- Co zrobię jutro: -->
-Następne dziś: atom loaderka
-Następne: PublicApisTable
-a) Dopicować layout (style/templatka)
-b) ogarnąć propsy i ts (przejść z yupa na zoda)
-c) Templatka na pustą tablicę
-d) Dodać unit testy
-e) skonfigurować storybooka
-f) dodać storybooka do PublicApisTable
-  
-1. Atomy tabelki (wrapper vuetify v-table), atom paginacji, atom loaderka?
-2. Molekuła tabelki (wygląd pod nasz projekt)
+<!-- Co zrobię dziś/jutro: -->
+Następne dziś: ogarnąć huskyego i zakomitować pracę.
+
+1. Atomy
++tabelki (wrapper vuetify v-table),
++atom paginacji,
++atom loaderka
+2. +Molekuła tabelki (wygląd pod nasz projekt)
 3. Organizm listy: tabelka + loaderek + paginacja
 4. Wstawić w HomeView Organizm Listy z testowymi danymi
 5. W HomeView pobranie listy i przekazanie do Organizmu (skopiować walidację zodem)
+6. Dodać huskyego!
 
 Kolejny ficzer który wezmę na tapetę:
 pobieranie public apis i wyświetlanie ich. To zaangażuje store, axiosa
@@ -30,13 +27,11 @@ Deploy
 CR i fixy
 
 Storybook todo:
-- przejrzeć nasz projekt co mamy ciekawego do przeniesienia
-- czy prawidłowo działają sloty
-+ czy da się jakoś prosto zrobić zmianę motywu vuetify
-+ czy da się jakoś prosto zrobić zmianę i18n
 - uzupełnić storybook dla komponentów które ich nie mają
 - przejrzeć dokumentację czy czegoś nie chcę użyć (i zrobić komponent na ficzery których nie użyłem?)
 - opublikować storybook w chromecast?
+- przykład v-model jest w wiosna-ui (pewnie będzie git do pagination atom)
+- pokminić z vue-router, bo gdy dodaje ten plugin do storybooka to ButtonAtom się wywala
 <!--  -->
 
 Ctr + shift + P: Typescript: restart TS server

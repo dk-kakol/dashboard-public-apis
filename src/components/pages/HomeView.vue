@@ -15,23 +15,23 @@ import type { Entries } from '@/types';
 
 const apis: Entries = [
   {
-    "API": "AdoptAPet",
-    "Description": "Resource to help get pets adopted",
-    "Auth": "apiKey",
+    API: 'AdoptAPet',
+    Description: 'Resource to help get pets adopted',
+    Auth: 'apiKey',
     // "Auth": Auth.APIKey,
-    "HTTPS": true,
-    "Cors": "yes",
-    "Link": "https://www.adoptapet.com/public/apis/pet_list.html",
-    "Category": "Animals"
+    HTTPS: true,
+    Cors: 'yes',
+    Link: 'https://www.adoptapet.com/public/apis/pet_list.html',
+    Category: 'Animals'
   },
   {
-    "API": "Axolotl",
-    "Description": "Collection of axolotl pictures and facts",
-    "Auth": "",
-    "HTTPS": true,
-    "Cors": "no",
-    "Link": "https://theaxolotlapi.netlify.app/",
-    "Category": "Animals"
+    API: 'Axolotl',
+    Description: 'Collection of axolotl pictures and facts',
+    Auth: '',
+    HTTPS: true,
+    Cors: 'no',
+    Link: 'https://theaxolotlapi.netlify.app/',
+    Category: 'Animals'
   }
 ];
 </script>

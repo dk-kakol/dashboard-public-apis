@@ -1,4 +1,4 @@
-import type { EndpointParams, ApiEndpoints } from "@/types";
+import type { EndpointParams, ApiEndpoints } from '@/types';
 class Endpoints {
   apiPrefix: string;
 

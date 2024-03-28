@@ -2,13 +2,13 @@ import { createWrapper, flushPromises, nextTick, type VueWrapper } from '@/tests
 import AboutView from '@/components/pages/AboutView.vue';
 import useTestStore from '@/stores/testStore';
 
-let wrapper: VueWrapper
+let wrapper: VueWrapper;
 
 beforeAll(async () => {
   wrapper = createWrapper(AboutView);
   await flushPromises();
   await nextTick();
-})
+});
 
 describe('About View', () => {
   it('should render properly', () => {
@@ -35,9 +35,9 @@ describe('About View', () => {
   it('should render count from publicFetch', async () => {
     // stubActions:
     // When set to false, actions are only spied, but they will still get executed
-    // When set to true, actions will be replaced with spies, resulting in their code not being executed. 
-    // Defaults to true. 
-    wrapper = createWrapper(AboutView, undefined, { stubActions: false } );
+    // When set to true, actions will be replaced with spies, resulting in their code not being executed.
+    // Defaults to true.
+    wrapper = createWrapper(AboutView, undefined, { stubActions: false });
     await flushPromises();
     await nextTick();
 
@@ -53,4 +53,4 @@ describe('About View', () => {
 
     expect(testStore.fetchPublicApis).toHaveBeenCalledOnce();
   });
-})
+});

@@ -6,12 +6,6 @@
     "aboutTitle": "O projekcie",
     "homeTitle": "Lista"
   },
-  "testArray": [
-    { "title": "a" },
-    { "title": "b" }
-  ],
-  "secondTestArray": [
-    "a",
-    "b"
-  ]
+  "testArray": [{ "title": "a" }, { "title": "b" }],
+  "secondTestArray": ["a", "b"]
 }

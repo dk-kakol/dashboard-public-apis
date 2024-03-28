@@ -1,4 +1,4 @@
-import { removeOrphans } from '@/helpers'
+import { removeOrphans } from '@/helpers';
 
 /**
  * Gets all text nodes within an HTMLElement.
@@ -6,16 +6,16 @@ import { removeOrphans } from '@/helpers'
  * @returns An array of text Node objects.
  */
 const getTextNodes = (el: HTMLElement): Node[] => {
-  const walk = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null)
-  const nodes: Node[] = []
+  const walk = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
+  const nodes: Node[] = [];
 
-  let node
+  let node;
   while ((node = walk.nextNode())) {
-    nodes.push(node)
+    nodes.push(node);
   }
 
-  return nodes
-}
+  return nodes;
+};
 
 /**
  * Sets the value of a text node.
@@ -23,25 +23,25 @@ const getTextNodes = (el: HTMLElement): Node[] => {
  * @param value The value to set.
  */
 const setNodeValue = (node: Node, value: string | null): void => {
-  node.nodeValue = value
-}
+  node.nodeValue = value;
+};
 
 const updateNodes = (nodes: Node[]) => {
   if (nodes && nodes.length > 0) {
     Object.entries(nodes).forEach(([, textNode]) => {
-      const { nodeValue } = textNode
+      const { nodeValue } = textNode;
       if (typeof nodeValue === 'string') {
-        setNodeValue(textNode, removeOrphans(nodeValue))
+        setNodeValue(textNode, removeOrphans(nodeValue));
       }
-    })
+    });
   }
-}
+};
 
 /**
  * Directive to remove orphans in text nodes of an element.
  * @param element The HTMLElement to apply the directive to.
  */
 export const orphans = (element: HTMLElement): void => {
-  const nodes = getTextNodes(element)
-  updateNodes(nodes)
-}
+  const nodes = getTextNodes(element);
+  updateNodes(nodes);
+};

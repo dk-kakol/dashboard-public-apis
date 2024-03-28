@@ -15,14 +15,13 @@ const useTestStore = defineStore('testStore', () => {
     await publicApis.fetchList().then((data) => {
       count.value = data.data.count as number;
     });
-  }
+  };
 
   return {
     count,
     getCount,
-    fetchPublicApis,
-  }
-
-})
+    fetchPublicApis
+  };
+});
 
 export default useTestStore;

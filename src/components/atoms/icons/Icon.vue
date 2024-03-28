@@ -9,7 +9,7 @@ import iconsSize from '@/composables/iconsSize';
 const defaultSize: IconSize = iconsSize();
 
 interface Props {
-    size?: string|number,
+  size?: string | number;
 }
 const props = defineProps<Props>();
 </script>

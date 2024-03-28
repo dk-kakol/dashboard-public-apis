@@ -1,6 +1,5 @@
 import DetailsTd from '@/components/molecules/publicApisTable/detailsTd/DetailsTd.vue';
-import { createWrapper, type VueWrapper } from "@/tests/utils";
-
+import { createWrapper, type VueWrapper } from '@/tests/utils';
 
 let wrapper: VueWrapper;
 const keyText = 'key';
@@ -11,13 +10,13 @@ beforeAll(() => {
       keyText
     }
   });
-})
+});
 
 describe('Details Td', () => {
   it('should render properly', () => {
-    const detailsTd = wrapper.find('[data-test="m-detailsTd"]')
+    const detailsTd = wrapper.find('[data-test="m-detailsTd"]');
     expect(detailsTd.exists()).toBe(true);
-  })
+  });
 
   it('should render passed props ', async () => {
     const valueText = 'text';
@@ -35,13 +34,13 @@ describe('Details Td', () => {
     const valueSlot = 'slot';
     wrapper = createWrapper(DetailsTd, {
       props: {
-        keyText,
+        keyText
       },
       slots: {
-        default: valueSlot,
-      },
+        default: valueSlot
+      }
     });
 
     expect(wrapper.text()).toContain(valueSlot);
-  })
-})
+  });
+});

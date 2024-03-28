@@ -7,9 +7,9 @@ let testStore: ReturnType<typeof useTestStore>;
 
 describe('Test Store', () => {
   beforeEach(() => {
-    setActivePinia(createPinia())
+    setActivePinia(createPinia());
     testStore = useTestStore();
-  })
+  });
 
   it('getCount', () => {
     expect(testStore.getCount).toBeDefined();
@@ -17,7 +17,7 @@ describe('Test Store', () => {
   });
 
   it('fetchPublicApis dispatch correctly', async () => {
-    // Creates a pinia instance for unit tests that requires mocking the stores. 
+    // Creates a pinia instance for unit tests that requires mocking the stores.
     // By default, all actions are mocked and therefore not executed.
     // Only with createTestingPinia you can pass extra config like stubActions, initialState,etc.
     setActivePinia(createTestingPinia());
@@ -26,7 +26,7 @@ describe('Test Store', () => {
     await testStore.fetchPublicApis();
 
     expect(testStore.fetchPublicApis).toHaveBeenCalledTimes(1);
-  })
+  });
 
   it('fetchPublicApis call fetchList from publicApis', async () => {
     const fetchPublicApisSpyOn = vi.spyOn(testStore, 'fetchPublicApis');
@@ -38,11 +38,11 @@ describe('Test Store', () => {
     expect(publicApisSpyOn).toHaveBeenCalledTimes(1);
     expect(fetchPublicApisSpyOn).toHaveBeenCalledTimes(1);
     expect(testStore.fetchPublicApis).toHaveBeenCalledTimes(1);
-  })
+  });
 
   it('fetchPublicApis set count correctly', async () => {
     await testStore.fetchPublicApis();
 
     expect(testStore.getCount).toBe(100);
-  })
-})
+  });
+});

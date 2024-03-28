@@ -10,7 +10,7 @@ import { withVuetifyTheme } from './withVuetifyTheme.decorator';
 setup((app) => {
   app.use(vuetify);
   app.use(i18n);
-  app.use(router);
+  // app.use(router);
   app.use(createPinia());
   initDirectives(app);
 })

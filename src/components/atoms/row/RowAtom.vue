@@ -1,10 +1,7 @@
 <template>
-  <v-row
-    v-bind="$attrs"
-    data-test="a-rowAtom">
+  <v-row v-bind="$attrs" data-test="a-rowAtom">
     <slot></slot>
   </v-row>
 </template>
 
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>

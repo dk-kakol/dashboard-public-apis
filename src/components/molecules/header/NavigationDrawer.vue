@@ -8,7 +8,7 @@
         :to="item?.route"
         class="m-navigationDrawer__listItem -overwritePadding"
         data-test="m-navigationDrawer__listItem"
-        ></v-list-item>
+      ></v-list-item>
     </v-list>
   </v-navigation-drawer>
 </template>
@@ -17,7 +17,7 @@
 import type { NavigationDrawerListItem } from '@/types';
 
 interface Props {
-  items: NavigationDrawerListItem[],
+  items: NavigationDrawerListItem[];
 }
 const props = defineProps<Props>();
 </script>

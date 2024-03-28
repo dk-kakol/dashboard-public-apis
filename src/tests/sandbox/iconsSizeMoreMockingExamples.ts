@@ -1,7 +1,7 @@
-import iconsSize from "@/composables/iconsSize";
+import iconsSize from '@/composables/iconsSize';
 import { useDisplay } from 'vuetify';
-import type { Mock } from "vitest";
-import { ref } from "vue";
+import type { Mock } from 'vitest';
+import { ref } from 'vue';
 
 // Here you can overwrite mocked modules defined in setupFiles:
 // 3 ways of mocking module:
@@ -20,14 +20,14 @@ import { ref } from "vue";
 //   })),
 // }))
 
-// third: mock only selected exports, other exports: leave original module implementation 
+// third: mock only selected exports, other exports: leave original module implementation
 vi.mock('vuetify', async () => {
   const vuetifyModule = await vi.importActual<typeof import('vuetify')>('vuetify');
   return {
     ...vuetifyModule,
-    useDisplay: vi.fn(() => ({ smAndUp: { value: true }}))
-  }
-})
+    useDisplay: vi.fn(() => ({ smAndUp: { value: true } }))
+  };
+});
 
 beforeEach(() => {
   // clearAllMocks, clear mocks usage, ex clear toHaveBeenCalledTimes
@@ -37,7 +37,7 @@ beforeEach(() => {
   vi.restoreAllMocks();
 
   // resetAllMocks(), reset the mock function implementations with brand new vi.fn()
-})
+});
 
 describe('test iconsSize composable examples', () => {
   it('without overwrighting global mock', () => {
@@ -46,8 +46,8 @@ describe('test iconsSize composable examples', () => {
     // mockedUseDisplay.mockReturnValue({
     //   smAndUp: { value: true },
     // })
-    let result = iconsSize();
-    
+    const result = iconsSize();
+
     expect(result).toBe('large');
   });
 
@@ -58,27 +58,27 @@ describe('test iconsSize composable examples', () => {
     //   smAndUp: { value: true },
     // })
     iconsSize();
-    
+
     // without beforeEach mockedUseDisplay have been called 2 times (one in previous test)
     expect(mockedUseDisplay).toHaveBeenCalledTimes(1);
-  })
+  });
 
   it('with overwriting global mock', () => {
     // first overwriting
     const mockedUseDisplay = useDisplay as Mock;
     mockedUseDisplay.mockReturnValue({
-      smAndUp: { value: true },
-    })
+      smAndUp: { value: true }
+    });
     let result = iconsSize();
     expect(result).toBe('large');
-  
+
     // second overwriting
     mockedUseDisplay.mockReturnValue({
-      smAndUp: { value: false },
-    })
+      smAndUp: { value: false }
+    });
     result = iconsSize();
     expect(result).toBe('small');
-  })
+  });
 
   it('with overwriting global mock. useDisplay mocked with vi.mocked insead of as Mock', () => {
     // vi.mocked is more typescript restricted than using as Mocked
@@ -92,8 +92,8 @@ describe('test iconsSize composable examples', () => {
     vi.mocked(useDisplay).mockReturnValue({
       ...useDisplay(),
       smAndUp: ref(false)
-    })
+    });
     const result = iconsSize();
     expect(result).toBe('small');
-  })
-})
+  });
+});

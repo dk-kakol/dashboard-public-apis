@@ -2,18 +2,25 @@
   <v-app-bar>
     <template v-slot:prepend>
       <v-app-bar-nav-icon
-        icon="mdi-menu" @click.stop="drawer = !drawer" :size="defaultSize"
-        data-test="o-header__menuButton">
+        icon="mdi-menu"
+        @click.stop="drawer = !drawer"
+        :size="defaultSize"
+        data-test="o-header__menuButton"
+      >
       </v-app-bar-nav-icon>
     </template>
 
     <v-app-bar-title class="d-none d-sm-block">{{ $t('template.header.title') }}</v-app-bar-title>
     <template v-slot:append>
-      <ButtonAtom icon v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`"
+      <ButtonAtom
+        icon
+        v-for="locale in $i18n.availableLocales"
+        :key="`locale-${locale}`"
         @click="$i18n.locale = locale"
         :variant="$i18n.locale === locale ? 'tonal' : 'text'"
         :size="defaultSize"
-        data-test="o-header__localeButton">
+        data-test="o-header__localeButton"
+      >
         {{ locale }}
       </ButtonAtom>
       <ButtonAtom @click="toggleTheme" icon>
@@ -22,8 +29,11 @@
     </template>
   </v-app-bar>
 
-  <NavigationDrawer :items="items" v-model="drawer"
-    data-test="o-header__navigationDrawer"></NavigationDrawer>
+  <NavigationDrawer
+    :items="items"
+    v-model="drawer"
+    data-test="o-header__navigationDrawer"
+  ></NavigationDrawer>
 </template>
 
 <script setup lang="ts">
@@ -45,8 +55,9 @@ const defaultSize: IconSize = iconsSize();
 const theme = useTheme();
 const drawer = ref<boolean>(false);
 const items = ref<NavigationDrawerListItem[]>([
-  { title: 'template.menu.aboutTitle', route: { name: 'About' }},
-  { title: 'template.menu.homeTitle', route: { name: 'Home' }},
+  { title: 'template.menu.aboutTitle', route: { name: 'About' } },
+  { title: 'template.menu.homeTitle', route: { name: 'Home' } }
 ]);
-const toggleTheme = (): ThemeName => theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark';
+const toggleTheme = (): ThemeName =>
+  (theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark');
 </script>

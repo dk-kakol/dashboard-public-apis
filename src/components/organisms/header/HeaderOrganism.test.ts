@@ -13,7 +13,7 @@ beforeAll(() => {
     //   }
     // }
   });
-})
+});
 
 describe('Header Organism', () => {
   it('should render header title properly', () => {
@@ -27,13 +27,15 @@ describe('Header Organism', () => {
   });
 
   it('should render buttons for all available locales', () => {
-    const headerLocaleButtons= wrapper.findAll('[data-test="o-header__localeButton"]');
+    const headerLocaleButtons = wrapper.findAll('[data-test="o-header__localeButton"]');
 
     expect(headerLocaleButtons).toHaveLength(i18n.global.availableLocales?.length);
   });
 
   it('should highlight button with initial locale', () => {
-    const highLightedLocaleButtons = wrapper.findAll('.v-btn--variant-tonal[data-test="o-header__localeButton"]');
+    const highLightedLocaleButtons = wrapper.findAll(
+      '.v-btn--variant-tonal[data-test="o-header__localeButton"]'
+    );
 
     expect(highLightedLocaleButtons).toHaveLength(1);
     expect(highLightedLocaleButtons[0].text()).toBe(defaultLocale);
@@ -45,18 +47,22 @@ describe('Header Organism', () => {
 
     await localeButton.trigger('click');
     const headerTitleText = wrapper.get('[class="v-toolbar-title__placeholder"]').text();
-    const highLightedLocaleButtons = wrapper.findAll('.v-btn--variant-tonal[data-test="o-header__localeButton"]');
+    const highLightedLocaleButtons = wrapper.findAll(
+      '.v-btn--variant-tonal[data-test="o-header__localeButton"]'
+    );
 
     expect(localeButton.classes()).toContain('v-btn--variant-tonal');
     expect(highLightedLocaleButtons).toHaveLength(1);
-    expect(headerTitleText).toBe(messages[localeButtonText as keyof typeof messages].template.header.title)
+    expect(headerTitleText).toBe(
+      messages[localeButtonText as keyof typeof messages].template.header.title
+    );
   });
 
   it('should open NavigationDrawer when Menu Button Clicked', async () => {
     const headerMenuButton = wrapper.get('[data-test="o-header__menuButton"]');
     await headerMenuButton.trigger('click');
     const headerNavigationDrawer = wrapper.get('[data-test="o-header__navigationDrawer"]');
-  
+
     expect(headerNavigationDrawer.classes()).toContain('v-navigation-drawer--active');
   });
-})
+});

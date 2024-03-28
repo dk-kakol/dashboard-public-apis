@@ -6,20 +6,20 @@ let wrapper: VueWrapper;
 beforeAll(() => {
   wrapper = createWrapper(DefaultTemplate, {
     slots: {
-      body: 'Main Content',
+      body: 'Main Content'
     }
   });
-})
+});
 
 describe('Default template', () => {
   it('should render properly all sections', () => {
     const Sections = [
       wrapper.findComponent({ name: 'HeaderOrganism' }),
       wrapper.findComponent({ name: 'v-main' }),
-      wrapper.findComponent({ name: 'v-footer' }),
+      wrapper.findComponent({ name: 'v-footer' })
     ];
 
-    Sections.forEach((section) => expect(section.exists()).toBe(true) );
+    Sections.forEach((section) => expect(section.exists()).toBe(true));
   });
 
   it('should render passed template in the main section', () => {
@@ -29,4 +29,4 @@ describe('Default template', () => {
     // or
     // expect(mainSection.html()).toContain('Main Content');
   });
-})
+});

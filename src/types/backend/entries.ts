@@ -1,19 +1,23 @@
-import type { z } from 'zod'
-import type { entrySchema, entriesSchema, entriesResponseSchema } from '@/services/http/schemas/entries';
+import type { z } from 'zod';
+import type {
+  entrySchema,
+  entriesSchema,
+  entriesResponseSchema
+} from '@/services/http/schemas/entries';
 
 export enum Cors {
-    No = "no",
-    Unknown = "unknown",
-    Unkown = "unkown",
-    Yes = "yes",
+  No = 'no',
+  Unknown = 'unknown',
+  Unkown = 'unkown',
+  Yes = 'yes'
 }
 
 export enum Auth {
-    APIKey = "apiKey",
-    Empty = "",
-    OAuth = "OAuth",
-    UserAgent = "User-Agent",
-    XMashapeKey = "X-Mashape-Key",
+  APIKey = 'apiKey',
+  Empty = '',
+  OAuth = 'OAuth',
+  UserAgent = 'User-Agent',
+  XMashapeKey = 'X-Mashape-Key'
 }
 
 export type Entry = z.infer<typeof entrySchema>;

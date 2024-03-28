@@ -1,5 +1,5 @@
-import { defineComponent } from "vue";
-import iconsSize from "@/composables/iconsSize";
+import { defineComponent } from 'vue';
+import iconsSize from '@/composables/iconsSize';
 import { useDisplay } from 'vuetify';
 import { createWrapper } from '@/tests/utils';
 
@@ -9,7 +9,7 @@ vi.unmock('vuetify');
 describe('iconsSize', () => {
   it('should return small if display is smaller than smAndUp. Test in component', () => {
     const TestComponent = defineComponent({
-      template:  '<v-layout></v-layout>',
+      template: '<v-layout></v-layout>',
       setup() {
         const { smAndUp } = useDisplay();
         smAndUp.value = false;
@@ -17,9 +17,9 @@ describe('iconsSize', () => {
         return { result, test };
       }
     });
-    
+
     const wrapper = createWrapper(TestComponent).findComponent(TestComponent);
 
     expect(wrapper.vm.result).toBe('small');
-  })
+  });
 });

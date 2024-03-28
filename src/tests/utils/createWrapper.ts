@@ -4,21 +4,21 @@ import { createVuetify } from 'vuetify';
 import * as components from 'vuetify/components';
 import * as directives from 'vuetify/directives';
 import i18n from '@/plugins/i18n';
-import { createTestingPinia, type TestingOptions } from '@pinia/testing'
-import { orphans } from '@/directives/orphans/orphans'
+import { createTestingPinia, type TestingOptions } from '@pinia/testing';
+import { orphans } from '@/directives/orphans/orphans';
 
 const vuetify = createVuetify({
   components,
-  directives,
-})
+  directives
+});
 
 global.ResizeObserver = require('resize-observer-polyfill');
 
 export default <Params, Data>(
   componentToMount: Component,
   options?: MountingOptions<Params, Data>,
-  piniaConfig?: TestingOptions)
-  : VueWrapper => {
+  piniaConfig?: TestingOptions
+): VueWrapper => {
   const WrapperComponent = defineComponent({
     template: `
       <v-layout>
@@ -29,24 +29,24 @@ export default <Params, Data>(
             </template>
           </componentToMount>
         </Suspense>
-      </v-layout>`,
+      </v-layout>`
   });
 
   const wrapper = mount(WrapperComponent, {
     global: {
       components: {
-        componentToMount,
+        componentToMount
       },
       plugins: [vuetify, i18n, createTestingPinia(piniaConfig)],
       mocks: { ...options?.global?.mocks },
-      stubs: ["router-link", "router-view"],
+      stubs: ['router-link', 'router-view'],
       directives: {
         Orphans: orphans
       }
     },
     props: { ...options?.props },
-    slots: { ...options?.slots },
+    slots: { ...options?.slots }
   });
-  
+
   return wrapper;
-}
+};

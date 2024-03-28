@@ -1,4 +1,4 @@
-import { z } from 'zod'
+import { z } from 'zod';
 // import { Cors, Auth } from '@/types';
 
 // export const entrySchema = z.object({
@@ -14,11 +14,11 @@ import { z } from 'zod'
 export const entrySchema = z.object({
   API: z.string(),
   Description: z.string(),
-  Auth: z.enum(["apiKey", "", "OAuth", "User-Agent", "X-Mashape-Key"]),
+  Auth: z.enum(['apiKey', '', 'OAuth', 'User-Agent', 'X-Mashape-Key']),
   HTTPS: z.boolean(),
-  Cors: z.enum(["no", "unknown", "unkown", "yes"]),
+  Cors: z.enum(['no', 'unknown', 'unkown', 'yes']),
   Link: z.string(),
-  Category: z.string(),
+  Category: z.string()
 });
 
 export const entriesSchema = z.array(entrySchema);
