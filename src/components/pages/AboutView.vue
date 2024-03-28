@@ -64,4 +64,10 @@ const secondTestArray: string[] = tm('template.secondTestArray');
 // const templateLangs = tm('template');
 
 const currentPagination = ref<number>();
+
+// Widok About, zawiera:
+// Opis co to jest
+// Sprawdź czy service jest alive, jeśli nie, to włącz mockowanie requestów,
+// Link do serwisu
+// Kontakt do autora
 </script>

@@ -3,5 +3,6 @@
 
 yarn type-check
 yarn lint
+npx stylelint "**/*.{scss,vue}" --fix
 yarn format
 yarn test:unit

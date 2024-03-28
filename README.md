@@ -11,7 +11,7 @@ Następne dziś: ogarnąć huskyego i zakomitować pracę.
 3. Organizm listy: tabelka + loaderek + paginacja
 4. Wstawić w HomeView Organizm Listy z testowymi danymi
 5. W HomeView pobranie listy i przekazanie do Organizmu (skopiować walidację zodem)
-6. Dodać huskyego!
+6. +Dodać huskyego!
 
 Kolejny ficzer który wezmę na tapetę:
 pobieranie public apis i wyświetlanie ich. To zaangażuje store, axiosa
@@ -47,6 +47,7 @@ Dodano vee-validate z customowymi komunikatami błędów.
 Dodano axiosa
 https://enetoolveda.medium.com/how-to-use-axios-typescript-like-a-pro-7c882f71e34a
 Dodano storybooka
+Dodano huskyego. Przed każdym commitem lint, unit testy, prettier i type-
 
 Jak będziesz potrzebował pierwornych plików to masz projekt test z postawionym środowiskiem.
 <!-- dalszy workflow iteracyjnie:

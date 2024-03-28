@@ -25,8 +25,7 @@ const props = defineProps<Props>();
 <style lang="scss" scoped>
 .m-navigationDrawer__listItem {
   &.-overwritePadding {
-    padding-inline-start: 6px;
-    padding-inline-end: 6px;
+    padding-inline: 6px 6px;
   }
 }
 </style>

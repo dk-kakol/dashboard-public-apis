@@ -1,4 +1,4 @@
-import { h, type VNodeProps } from 'vue';
+import { h } from 'vue';
 import StoryWrapper from './StoryWrapper.vue';
 
 export const DEFAULT_THEME = 'light';

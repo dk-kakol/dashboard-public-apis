@@ -113,6 +113,7 @@ const formatKey = function (key: string): string {
   &__descriptionTd {
     width: 30%;
   }
+
   &__detailsTd {
     @media #{map-get(settings.$display-breakpoints, 'md-and-down')} {
       width: 40%;

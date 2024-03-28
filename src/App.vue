@@ -9,5 +9,3 @@ import { RouterView } from 'vue-router';
     </Suspense>
   </v-app>
 </template>
-
-<style scoped></style>
