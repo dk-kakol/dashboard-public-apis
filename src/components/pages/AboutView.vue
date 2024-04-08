@@ -63,7 +63,7 @@ const testArray: TestArrayItem[] = tm('template.testArray');
 const secondTestArray: string[] = tm('template.secondTestArray');
 // const templateLangs = tm('template');
 
-const currentPagination = ref<number>();
+const currentPagination = ref<number>(2);
 
 // Widok About, zawiera:
 // Opis co to jest

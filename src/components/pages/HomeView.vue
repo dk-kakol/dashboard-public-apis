@@ -1,8 +1,11 @@
 <template>
   <DefaultTemplate>
     <template #body>
-      <div class="text-h1 bg-amber-accent-4">Elo from Home View!</div>
-      <PublicApisList :items="apis"></PublicApisList>
+      <PublicApisList
+        :apis="apis"
+        :loading="false"
+        :pagesCount="5"
+        v-model:currentPage="currentPage"></PublicApisList>
     </template>
   </DefaultTemplate>
 </template>
@@ -12,6 +15,7 @@ import DefaultTemplate from '@/components/templates/DefaultTemplate.vue';
 import PublicApisList from '@/components/organisms/publicApisList/PublicApisList.vue';
 import type { Entries } from '@/types';
 // import { Auth } from '@/types';
+import { ref } from 'vue';
 
 const apis: Entries = [
   {
@@ -34,4 +38,7 @@ const apis: Entries = [
     Category: 'Animals'
   }
 ];
+
+const currentPage = ref<number>(3);
+// ten komponent będzie zbierał w całość wysłanie requesta o listę i współpracę ze store'm
 </script>

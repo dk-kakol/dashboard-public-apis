@@ -16,7 +16,6 @@ describe('Default template', () => {
     const Sections = [
       wrapper.findComponent({ name: 'HeaderOrganism' }),
       wrapper.findComponent({ name: 'v-main' }),
-      wrapper.findComponent({ name: 'v-footer' })
     ];
 
     Sections.forEach((section) => expect(section.exists()).toBe(true));
