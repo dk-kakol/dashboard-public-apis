@@ -30,7 +30,7 @@ const apis: Entries = [
  It only receive data for displaying and emits users actions.
  Fetching data and other logic should be done by parent component.
  */
- const meta: Meta<typeof PublicApisList> = {
+const meta: Meta<typeof PublicApisList> = {
   component: PublicApisList,
   tags: ['autodocs'],
   // add argTypes: {}
@@ -51,7 +51,7 @@ const apis: Entries = [
   args: {
     apis,
     loading: false,
-    pagesCount: 5,
+    pagesCount: 5
   }
 };
 
@@ -68,16 +68,14 @@ export const NoApisList: Story = {
 
 export const LoadingApisList: Story = {
   args: {
-    loading: true,
+    loading: true
   }
 };
 
 const longApisEntries: Entries = [];
-for (const i of new Array(10)) {
-  longApisEntries.push(...apis);
-}
+Array(10).fill('1').forEach(() => longApisEntries.push(...apis));
 export const LongApisList: Story = {
   args: {
-    apis: longApisEntries,
+    apis: longApisEntries
   }
 };

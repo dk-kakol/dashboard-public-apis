@@ -5,7 +5,8 @@
         :apis="apis"
         :loading="false"
         :pagesCount="5"
-        v-model:currentPage="currentPage"></PublicApisList>
+        v-model:currentPage="currentPage"
+      ></PublicApisList>
     </template>
   </DefaultTemplate>
 </template>

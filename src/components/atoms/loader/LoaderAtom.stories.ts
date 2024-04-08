@@ -3,12 +3,12 @@ import LoaderAtom from './LoaderAtom.vue';
 import ButtonAtom from '@/components/atoms/buttons/ButtonAtom.vue';
 import { ref } from 'vue';
 
-/** 
- * Loader Atom is initially in non loading state 
+/**
+ * Loader Atom is initially in non loading state
  * A skeleton loader is considered to be in a loading state if one of the following conditions are met:
  * 1. The default slot is not used
  * 2. The loading property is set to true
-*/
+ */
 const meta: Meta<typeof LoaderAtom> = {
   component: LoaderAtom,
   tags: ['autodocs'],

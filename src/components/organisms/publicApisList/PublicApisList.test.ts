@@ -29,7 +29,7 @@ beforeEach(() => {
     props: {
       apis,
       loading: false,
-      pagesCount,
+      pagesCount
     }
   });
 });
@@ -48,7 +48,7 @@ describe('PublicApisList', () => {
 
   it('should not render pagination if apis list is empty', async () => {
     await wrapper.setProps({
-      apis: [],
+      apis: []
     });
 
     const pagination = wrapper.find('[data-test="o-publicApisList__pagination"]');
@@ -58,17 +58,19 @@ describe('PublicApisList', () => {
 
   it('should render loader of text type when loading prop with true value is passed', async () => {
     await wrapper.setProps({
-      loading: true,
+      loading: true
     });
 
-    const loader = wrapper.find('[data-test="o-publicApisList__loader"]').find('.v-skeleton-loader__text');
-    
+    const loader = wrapper
+      .find('[data-test="o-publicApisList__loader"]')
+      .find('.v-skeleton-loader__text');
+
     expect(loader.exists()).toBe(true);
   });
 
   it('should not render pagination and table when loading prop with true value is passed', async () => {
     await wrapper.setProps({
-      loading: true,
+      loading: true
     });
 
     const pagination = wrapper.find('[data-test="o-publicApisList__pagination"]');
@@ -79,18 +81,22 @@ describe('PublicApisList', () => {
   });
 
   it('should emit update:currentPage event when user change pagination page', async () => {
-    const currentComponent = wrapper.getComponent({name: 'PublicApisList'});
-    const secondPageButton = wrapper.find('[data-test="o-publicApisList__pagination"]').find('[aria-label="Go to page 2"]');
-    
+    const currentComponent = wrapper.getComponent({ name: 'PublicApisList' });
+    const secondPageButton = wrapper
+      .find('[data-test="o-publicApisList__pagination"]')
+      .find('[aria-label="Go to page 2"]');
+
     await secondPageButton.trigger('click');
-  
+
     expect(currentComponent.emitted()).toHaveProperty('update:currentPage');
     expect(currentComponent.emitted('update:currentPage')?.[0]).toEqual([2]);
   });
 
   it('should pass pagesCount prop to pagination component', () => {
-    const pagination = wrapper.getComponent<DefineComponent>('[data-test="o-publicApisList__pagination"]');
+    const pagination = wrapper.getComponent<DefineComponent>(
+      '[data-test="o-publicApisList__pagination"]'
+    );
 
     expect(pagination.props('length')).toBe(pagesCount);
-  })
+  });
 });

@@ -1,8 +1,5 @@
 <template>
-  <v-skeleton-loader
-    :type="type.toString()"
-    :loading="props.loading"
-    data-test="a-loaderAtom">
+  <v-skeleton-loader :type="type.toString()" :loading="props.loading" data-test="a-loaderAtom">
     <slot></slot>
   </v-skeleton-loader>
 </template>
