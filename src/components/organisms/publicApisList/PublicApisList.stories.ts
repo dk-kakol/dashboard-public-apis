@@ -73,7 +73,9 @@ export const LoadingApisList: Story = {
 };
 
 const longApisEntries: Entries = [];
-Array(10).fill('1').forEach(() => longApisEntries.push(...apis));
+Array(10)
+  .fill('1')
+  .forEach(() => longApisEntries.push(...apis));
 export const LongApisList: Story = {
   args: {
     apis: longApisEntries
