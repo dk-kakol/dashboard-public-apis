@@ -1,6 +1,5 @@
 import { createWrapper, flushPromises, nextTick, type VueWrapper } from '@/tests/utils';
 import AboutView from '@/components/pages/AboutView.vue';
-import useTestStore from '@/stores/testStore';
 
 let wrapper: VueWrapper;
 
@@ -23,34 +22,4 @@ describe('About View', () => {
     expect(title.text()).toBe('Elo from About View!');
   });
 
-  it('should call action fetchPublicApis from useTestStore', () => {
-    const testStore = useTestStore();
-    expect(testStore.fetchPublicApis).toHaveBeenCalledOnce();
-
-    // w komponencie poniższe nie zadziała. Musisz zrobić expect jak linia wyżej
-    // const fetchPublicApisSpyOn = vi.spyOn(testStore, 'fetchPublicApis');
-    // expect(fetchPublicApisSpyOn).toHaveBeenCalledOnce();
-  });
-
-  it('should render count from publicFetch', async () => {
-    // stubActions:
-    // When set to false, actions are only spied, but they will still get executed
-    // When set to true, actions will be replaced with spies, resulting in their code not being executed.
-    // Defaults to true.
-    wrapper = createWrapper(AboutView, undefined, { stubActions: false });
-    await flushPromises();
-    await nextTick();
-
-    const aboutViewInstance = wrapper.findComponent({ name: 'AboutView' });
-    console.log(aboutViewInstance.vm.count);
-    const count = wrapper.get('[data-test="p-aboutView__countNumber"]');
-
-    expect(count.text()).toBe('2');
-  });
-
-  it('should call action fetchPublicApis from useTestStore', () => {
-    const testStore = useTestStore();
-
-    expect(testStore.fetchPublicApis).toHaveBeenCalledOnce();
-  });
 });

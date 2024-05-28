@@ -1,35 +1,18 @@
 https://api.publicapis.org/
 https://pictogrammers.com/library/mdi/
 <!-- Co zrobię dziś/jutro: -->
-Następne dziś:
-+ walidowanie zodem responsa
-- testy organizm (weryfikacja), na widok i na store
-- storybook na organizm PublicApisList (weryfikacja) i widok HomeView i atom paginacji
-
-1. Atomy
-+tabelki (wrapper vuetify v-table),
-+atom paginacji,
-+atom loaderka
-2. +Molekuła tabelki (wygląd pod nasz projekt)
-3. +Organizm listy: tabelka + loaderek + paginacja
-4. +Wstawić w HomeView Organizm Listy z testowymi danymi
-5. W HomeView pobranie listy i przekazanie do Organizmu (skopiować walidację zodem)
-6. +Dodać huskyego!
-
-Kolejny ficzer który wezmę na tapetę:
-pobieranie public apis i wyświetlanie ich. To zaangażuje store, axiosa
-Posprzątać stare wywołania axiosa.
+Filtrowanie (resourcy i kolejne endpointy zrobię z composablem (patrz resource na swd))
 
 <!-- Co zrobię pojutrze: -->
-Filtrowanie (resourcy i kolejne endpointy zrobię z composablem (patrz resource na swd))
 Storybook todo:
 - uzupełnić storybook dla komponentów które ich nie mają
 - opublikować storybook w chromecast?
-- przykład v-model jest w wiosna-ui (pewnie będzie git do pagination atom)
 - pokminić z vue-router, bo gdy dodaje ten plugin do storybooka to ButtonAtom się wywala
 About Page - opisać technologie i health check (opis technologii za pomocą AI)
 Update readme
 Deploy
+Zrobić jakieś proste gh actions
+Dodać dependabota
 CR i fixy
 Zrobienie drugiego posprzątanego projektu w gh pokazowego
 
