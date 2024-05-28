@@ -3,7 +3,7 @@
     v-model="currentPage"
     :length="props.length"
     :disabled="props.disabled"
-    :total-visible="props['total-visible']"
+    :total-visible="props.totalVisible"
     next-icon="mdi-menu-right"
     prev-icon="mdi-menu-left"
     v-bind="$attrs"

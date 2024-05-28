@@ -1,5 +1,5 @@
 <template>
-  <TableAtom data-test="m-publicApisTable">
+  <TableAtom data-test="m-publicApisTable" hover>
     <thead class="text-h6">
       <tr class="d-table-row d-md-none">
         <th v-for="itemKey in mobileFields" :key="itemKey" class="font-weight-bold">
@@ -26,7 +26,7 @@
     </tbody>
     <tbody v-else>
       <tr class="d-table-row d-md-none" v-for="item in props.apis" :key="item.API">
-        <td>
+        <td class="m-publicApisTable__apiTd">
           {{ item.API }}
         </td>
         <td class="m-publicApisTable__detailsTd">
@@ -37,8 +37,8 @@
               <IconAtom icon="mdi-open-in-new"></IconAtom>
             </ButtonAtom>
           </DetailsTd>
+          <DetailsTd :keyText="$t('table.keys.description')" :valueText="item.Description" v-orphans></DetailsTd>
         </td>
-        <td v-orphans>{{ item.Description }}</td>
       </tr>
       <tr
         class="d-none d-md-table-row"
@@ -92,7 +92,7 @@ const desktopFields: EntryKeys[] = [
   'Category',
   'Link'
 ];
-const mobileFields = ['api', 'details', 'description'];
+const mobileFields = ['api', 'details'];
 
 const { smAndDown } = useDisplay();
 const colSpan = computed<number>(() =>
@@ -108,6 +108,7 @@ const formatKey = function (key: string): string {
 
 <style lang="scss">
 @use '@/assets/vuetify/settings.scss';
+@use 'sass:map';
 
 .m-publicApisTable {
   &__descriptionTd {
@@ -115,8 +116,8 @@ const formatKey = function (key: string): string {
   }
 
   &__detailsTd {
-    @media #{map-get(settings.$display-breakpoints, 'md-and-down')} {
-      width: 40%;
+    @media #{map.get(settings.$display-breakpoints, 'md-and-down')} {
+      width: 70%;
     }
   }
 }

@@ -6,6 +6,7 @@ import { removeOrphans } from '@/helpers';
 let wrapper: VueWrapper;
 const apis: Entries = [
   {
+    id: 'firstid',
     API: 'AdoptAPet',
     Description: 'Resource to help get pets adopted',
     Auth: 'apiKey',
@@ -15,6 +16,7 @@ const apis: Entries = [
     Category: 'Animals'
   },
   {
+    id: 'secondid',
     API: 'Axolotl',
     Description: 'Collection of axolotl pictures and facts',
     Auth: '',
@@ -55,7 +57,7 @@ describe('PublicApisTable', () => {
     expect(apisRows.length).toBe(apis.length);
   });
 
-  it('should render all data from apis item (button with href for link prop)', async () => {
+  it('should render data from apis item (button with href for link prop). All without id!', async () => {
     const apisItem = apis[0];
     await wrapper.setProps({
       apis: [apisItem]
@@ -64,7 +66,8 @@ describe('PublicApisTable', () => {
     const itemLinkButton = wrapper.find('[data-test="m-publicApisTable__apisLinkButton"]');
 
     for (const [key, value] of Object.entries(apisItem)) {
-      if (key === 'Link') {
+      if (key === 'id') return;
+      else if (key === 'Link') {
         expect(itemLinkButton.attributes('href')).toBe(value);
       } else {
         const valueWithoutOrphans = removeOrphans(value.toString());

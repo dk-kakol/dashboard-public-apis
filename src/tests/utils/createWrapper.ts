@@ -39,7 +39,13 @@ export default <Params, Data>(
       },
       plugins: [vuetify, i18n, createTestingPinia(piniaConfig)],
       mocks: { ...options?.global?.mocks },
-      stubs: ['router-link', 'router-view'],
+      stubs: {
+        'router-link': true,
+        'router-view': true,
+        'expand-transition': {
+          template: '<div><slot /></div>'
+        }
+      },
       directives: {
         Orphans: orphans
       }

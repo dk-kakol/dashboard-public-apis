@@ -27,3 +27,8 @@ export type EntryKeys = keyof Entry;
 export type Entries = z.infer<typeof entriesSchema>;
 
 export type EntriesResponse = z.infer<typeof entriesResponseSchema>;
+
+export type FetchApisParams = {
+  offset?: number;
+  limit?: number;
+}

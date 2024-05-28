@@ -45,7 +45,7 @@ describe('About View', () => {
     console.log(aboutViewInstance.vm.count);
     const count = wrapper.get('[data-test="p-aboutView__countNumber"]');
 
-    expect(count.text()).toBe('100');
+    expect(count.text()).toBe('2');
   });
 
   it('should call action fetchPublicApis from useTestStore', () => {

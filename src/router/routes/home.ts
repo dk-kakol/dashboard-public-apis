@@ -1,4 +1,4 @@
-const Home = () => import('@/components/pages/HomeView.vue');
+const Home = () => import('@/components/pages/home/HomeView.vue');
 
 export default {
   path: '/',

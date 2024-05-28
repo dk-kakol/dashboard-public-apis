@@ -1,5 +1,5 @@
 export enum ApiEndpoints {
-  list = 'entries',
+  list = 'api-entries',
   random = 'random',
   categories = 'categories',
   testError = 'test/:id'

@@ -1,8 +1,10 @@
 <template>
-  <HeaderOrganism></HeaderOrganism>
-  <v-main>
-    <slot name="body"></slot>
-  </v-main>
+  <div>
+    <HeaderOrganism></HeaderOrganism>
+    <v-main>
+      <slot name="body"></slot>
+    </v-main>
+  </div>
 </template>
 
 <script setup lang="ts">

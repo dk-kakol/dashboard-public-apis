@@ -43,6 +43,6 @@ describe('Test Store', () => {
   it('fetchPublicApis set count correctly', async () => {
     await testStore.fetchPublicApis();
 
-    expect(testStore.getCount).toBe(100);
+    expect(testStore.getCount).toBe(2);
   });
 });

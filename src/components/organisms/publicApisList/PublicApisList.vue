@@ -14,6 +14,8 @@
       v-if="props.apis.length"
       :length="props.pagesCount"
       v-model="currentPage"
+      :totalVisible
+      :density
       class="mt-5"
       data-test="o-publicApisList__pagination"
     ></PaginationAtom>
@@ -25,6 +27,8 @@ import PublicApisTable from '@/components/molecules/publicApisTable/PublicApisTa
 import PaginationAtom from '@/components/atoms/pagination/PaginationAtom.vue';
 import LoaderAtom from '@/components/atoms/loader/LoaderAtom.vue';
 import type { Entries } from '@/types';
+import { computed } from 'vue';
+import { useDisplay } from 'vuetify';
 
 type Props = {
   apis: Entries;
@@ -33,4 +37,8 @@ type Props = {
 };
 const props = defineProps<Props>();
 const currentPage = defineModel<number>('currentPage');
+
+const { smAndUp } = useDisplay();
+const totalVisible = computed<number>(() => (smAndUp.value ? 6 : 3));
+const density = computed<string>(() => (smAndUp.value ? 'default' : 'compact'));
 </script>

@@ -1,15 +1,18 @@
 https://api.publicapis.org/
 https://pictogrammers.com/library/mdi/
 <!-- Co zrobię dziś/jutro: -->
-Następne dziś: ogarnąć huskyego i zakomitować pracę.
+Następne dziś:
++ walidowanie zodem responsa
+- testy organizm (weryfikacja), na widok i na store
+- storybook na organizm PublicApisList (weryfikacja) i widok HomeView i atom paginacji
 
 1. Atomy
 +tabelki (wrapper vuetify v-table),
 +atom paginacji,
 +atom loaderka
 2. +Molekuła tabelki (wygląd pod nasz projekt)
-3. Organizm listy: tabelka + loaderek + paginacja
-4. Wstawić w HomeView Organizm Listy z testowymi danymi
+3. +Organizm listy: tabelka + loaderek + paginacja
+4. +Wstawić w HomeView Organizm Listy z testowymi danymi
 5. W HomeView pobranie listy i przekazanie do Organizmu (skopiować walidację zodem)
 6. +Dodać huskyego!
 
@@ -18,20 +21,54 @@ pobieranie public apis i wyświetlanie ich. To zaangażuje store, axiosa
 Posprzątać stare wywołania axiosa.
 
 <!-- Co zrobię pojutrze: -->
-Dodać husky do projektu
-Filtrowanie
-Jakiś sprytny health check and mock backend if unavailable
-About Page - opisać technologie i health check
-Update readme
-Deploy
-CR i fixy
-
+Filtrowanie (resourcy i kolejne endpointy zrobię z composablem (patrz resource na swd))
 Storybook todo:
 - uzupełnić storybook dla komponentów które ich nie mają
-- przejrzeć dokumentację czy czegoś nie chcę użyć (i zrobić komponent na ficzery których nie użyłem?)
 - opublikować storybook w chromecast?
 - przykład v-model jest w wiosna-ui (pewnie będzie git do pagination atom)
 - pokminić z vue-router, bo gdy dodaje ten plugin do storybooka to ButtonAtom się wywala
+About Page - opisać technologie i health check (opis technologii za pomocą AI)
+Update readme
+Deploy
+CR i fixy
+Zrobienie drugiego posprzątanego projektu w gh pokazowego
+
+Ew. dalszy rozwój projektu:
+a) autoryzacja i authentykacja
+b) websockety? https://www.udemy.com/course/angular-2-and-nodejs-the-practical-guide/learn/lecture/10523172#questions/11161631/
+https://blog.logrocket.com/build-real-time-vue-app-websockets/
+c) image upload (+ może obróbka?) do zakładania konta
+e) pokminić animacje i technologie kreatywne: GSAP, ThreeJS, Framer Motion, PixiJS, WebGL
+(patrz https://p-programisci.pl/)
+f) wariacja na temat nuxt 
+g) Jakiś sprytny health check and mock backend if unavailable
+h) zakładanie konta,
+i) formularz dodawania public apis
+j) panel admina do sterowania kontami
+k) nadawanie uprawnien przez admina
+l) potwierdzanie konta (wysyłka maila)
+
+Backend - opis funkcjonalności:
+-autentykacja
+-autoryzacja (uprawnienia): na dodawanie publicApi, na usuwanie, zarządzanie uprawnieniami
+-publicApi ma zapisanego creatora i status ApiVerified (boolean)
+--ApiVerified: oczekujące na zatwierdzenie (false)/ zatwierdzone (true)
+-user: ma limit na dodawanie publicApi oczekujących, np 1
+-po dodaniu publicApi: zmniejszamy limit userowi dodającemu
+-jeśli weryfikacja jest pozytywna: zmieniamy status na zatwierdzony i zwiększamy limit userowi dodającemu o 1.
+-requesty:
+--user: dodawanie, logowanie, pobieranie wszystkich, usuwanie, edytowanie usera- 1 req (dodanie uprawnienia, usunięcie uprawnienia, edytowanie danych, zmiana limitu etc)
+--public api: pobieranie zatwierdzonych, pobieranie oczekujących, dodawanie, usuwanie, zatwierdzanie
+--resources: pobieranie możliwych kategorii i opcji. Uproszczenie: kategorii nie można dodawać nowych, tylko dostępna lista.
+--websocket na dodane public api przez innego usera
+-Ewentualny dalszy rozwój:
+-- uwierzytelnienie - https://github.com/dk-kakol/dashboard-public-apis-backend/blob/master/controllers/user.js#L56 - brak algorytmu jwt, kiedyś była to dosyć częsta podatność - podpis bez algorytmu
+-- dodałbym linter i podstawowe testy jednostkowe, żeby pokazać że wiesz że istnieją i powinno się je pisać
+-- dodałbym checki przy pull requeście, jakiś workflow githubowy (przy publicznym repo nie masz limitów użycia github actions) wykonujący testy i builda aplikacji
+-- rozważ typescript i składnię es6, to sztuka dla sztuki, ale jeśli chcesz zaprezentować umiejętności, to wrzucasz/używasz wszystkiego co umiesz, to aplikacja pokazowa
+-- skonfigurowałbym dockera, tak żeby po pierwsze pokazać że umiesz się nim posługiwać, a po drugie jeśli ktoś będzie chciał sobie to sprawdzić, to może odpalić całe środowisko jedną komendą
+-- jakieś screeny w readme, żeby pokazać o co chodzi w aplikacji
+
 <!--  -->
 
 Ctr + shift + P: Typescript: restart TS server
@@ -106,7 +143,8 @@ https://test-utils.vuejs.org/
 7. Storybook?
 https://storybook.js.org/ (czy może współgrać z cypressem?)
 
-8. Prettier
+8. Commit z husky, sprawdzenie czy zrobiło zmiany i recommit (lint, stylelint, unit testy, prettier i type-check)
+
 9. Koniec ficzera, można brać kolejny: idziemy do pkt 1 -->
 
 <!-- Po jednym/dwóch ficzerach plan co dalej:

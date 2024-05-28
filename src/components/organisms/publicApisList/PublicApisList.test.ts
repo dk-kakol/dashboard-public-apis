@@ -5,6 +5,7 @@ import type { Entries } from '@/types';
 let wrapper: VueWrapper;
 const apis: Entries = [
   {
+    id: 'firstid',
     API: 'AdoptAPet',
     Description: 'Resource to help get pets adopted',
     Auth: 'apiKey',
@@ -14,6 +15,7 @@ const apis: Entries = [
     Category: 'Animals'
   },
   {
+    id: 'secondid',
     API: 'Axolotl',
     Description: 'Collection of axolotl pictures and facts',
     Auth: '',
