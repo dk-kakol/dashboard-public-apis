@@ -73,7 +73,7 @@ Backend - opis funkcjonalności:
 
 Ctr + shift + P: Typescript: restart TS server
 docker compose up -d --build
-docker exec -it vite_docker sh
+docker exec -it dashboard-public-apis sh
 yarn run dev
 https://dev.to/ysmnikhil/how-to-build-with-react-or-vue-with-vite-and-docker-1a3l
 dodano Vuetify

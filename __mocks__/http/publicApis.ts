@@ -24,7 +24,7 @@ const apis: Entries = [
   }
 ];
 
-export default () => vi.mock('@/services/http/api/publicApis', () => {
+vi.mock('@/services/http/api/publicApis', () => {
   return {
     default: {
       fetchList: () => new Promise<{ data: EntriesResponse }>((resolve) => { 

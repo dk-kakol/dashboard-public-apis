@@ -1,8 +1,8 @@
 version: "3.4"
 services:
- vite_docker:
-   image: node:alpine
-   container_name: vite_docker
+ dashboard-public-apis:
+   image: node:current
+   container_name: dashboard-public-apis
    entrypoint: /bin/sh
    ports:
      - 8000:8000

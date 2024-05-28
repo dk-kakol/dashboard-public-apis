@@ -1,6 +1,6 @@
 import { vi } from 'vitest';
 
-export default () => vi.mock('vuetify', async () => {
+vi.mock('vuetify', async () => {
   const vuetifyModule = await vi.importActual<typeof import('vuetify')>('vuetify');
   return {
     ...vuetifyModule,
