@@ -3,7 +3,7 @@ import HomeView from '@/components/pages/home/HomeView.vue';
 import useApisStore from '@/stores/apis';
 
 let wrapper: VueWrapper;
-let currentComponent: Omit<VueWrapper<any>, "exists">;
+let currentComponent: Omit<VueWrapper<any>, 'exists'>;
 
 beforeEach(async () => {
   // stubActions:
@@ -21,29 +21,29 @@ describe('Home View', () => {
     const defaultTemplate = wrapper.find('[data-test="p-homeView__defaultTemplate"]');
 
     expect(defaultTemplate.exists()).toBe(true);
-  })
+  });
 
   it('should have defined currentPage, apis, pagesCount and loading from apis store', () => {
     expect(currentComponent.vm.currentPage).toBeDefined();
     expect(currentComponent.vm.apis).toBeDefined();
     expect(currentComponent.vm.pagesCount).toBeDefined();
     expect(currentComponent.vm.loading).toBeDefined();
-  })
+  });
 
   it('should render Public Apis List with apis, loading, pages count and current page props', () => {
     const publicApisList = wrapper.getComponent({ name: 'PublicApisList' });
-    
+
     expect(publicApisList.props('currentPage')).toBe(currentComponent.vm.currentPage);
     expect(publicApisList.props('apis')).toEqual(currentComponent.vm.apis);
     expect(publicApisList.props('pagesCount')).toBe(currentComponent.vm.pagesCount);
     expect(publicApisList.props('loading')).toBe(currentComponent.vm.loading);
-  })
+  });
 
   it('should call fetchApis action initially', () => {
     const apisStore = useApisStore();
 
     expect(apisStore.fetchApis).toHaveBeenCalledOnce();
-  })
+  });
 
   it('should call fetchApis action on users page change', async () => {
     const apisStore = useApisStore();
@@ -54,7 +54,7 @@ describe('Home View', () => {
       .find('[data-test="o-publicApisList__pagination"]')
       .find('[aria-label="Go to page 2"]');
     await secondPageButton.trigger('click');
-    
+
     expect(apisStore.fetchApis).toHaveBeenCalledTimes(2);
-  })
-})
+  });
+});

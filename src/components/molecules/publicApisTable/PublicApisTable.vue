@@ -37,7 +37,11 @@
               <IconAtom icon="mdi-open-in-new"></IconAtom>
             </ButtonAtom>
           </DetailsTd>
-          <DetailsTd :keyText="$t('table.keys.description')" :valueText="item.Description" v-orphans></DetailsTd>
+          <DetailsTd
+            :keyText="$t('table.keys.description')"
+            :valueText="item.Description"
+            v-orphans
+          ></DetailsTd>
         </td>
       </tr>
       <tr

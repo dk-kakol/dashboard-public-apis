@@ -1,12 +1,7 @@
 <template>
   <DefaultTemplate data-test="p-homeView__defaultTemplate">
     <template #body>
-      <PublicApisList
-        :apis
-        :loading
-        :pagesCount
-        v-model:currentPage="currentPage"
-      ></PublicApisList>
+      <PublicApisList :apis :loading :pagesCount v-model:currentPage="currentPage"></PublicApisList>
     </template>
   </DefaultTemplate>
 </template>
@@ -23,9 +18,5 @@ const apisStore = useApisStore();
 const { currentPage, apis, pagesCount, loading } = storeToRefs(apisStore);
 
 // array of multiple sources triggering refetching apis
-watch(
-  [currentPage],
-  async () => apisStore.fetchApis(),
-  { immediate: true }
-)
+watch([currentPage], async () => apisStore.fetchApis(), { immediate: true });
 </script>

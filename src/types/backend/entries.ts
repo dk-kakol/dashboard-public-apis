@@ -31,4 +31,4 @@ export type EntriesResponse = z.infer<typeof entriesResponseSchema>;
 export type FetchApisParams = {
   offset?: number;
   limit?: number;
-}
+};

@@ -15,7 +15,7 @@ const useApisStore = defineStore('apisStore', () => {
 
   const pagesCount = computed<number>(() => {
     if (!entriesPerPage.value) return 0;
-    return Math.ceil((countApis.value ?? 0) / entriesPerPage.value)
+    return Math.ceil((countApis.value ?? 0) / entriesPerPage.value);
   });
 
   const loading = ref<boolean>(false);
@@ -26,7 +26,7 @@ const useApisStore = defineStore('apisStore', () => {
       const params: FetchApisParams = {
         offset: (currentPage.value - 1) * entriesPerPage.value,
         limit: entriesPerPage.value
-      }
+      };
       const response = await publicApis.fetchList(params);
       await entriesResponseSchema.parse(response.data);
       apis.value = response.data.entries;
@@ -61,7 +61,7 @@ const useApisStore = defineStore('apisStore', () => {
     apis,
     pagesCount,
     loading,
-    fetchApis,
+    fetchApis
   };
 });
 

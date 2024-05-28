@@ -3,7 +3,7 @@ import HomeView from './HomeView.vue';
 
 const meta: Meta<typeof HomeView> = {
   component: HomeView,
-  tags: ['autodocs'],
+  tags: ['autodocs']
 };
 
 export default meta;

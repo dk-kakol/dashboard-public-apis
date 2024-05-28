@@ -1,7 +1,8 @@
 <template>
   <RowAtom align="center" no-gutters data-test="m-detailsTd">
     <ColAtom cols="12" sm="4" class="font-italic text-decoration-underline">
-      {{ props.keyText.concat(': ') }} </ColAtom>
+      {{ props.keyText.concat(': ') }}
+    </ColAtom>
     <ColAtom>
       <span>
         <slot>{{ props.valueText }}</slot>
