@@ -5,6 +5,6 @@ import type { EntriesResponse, FetchApisParams } from '@/types';
 
 export default {
   fetchList(params?: FetchApisParams) {
-    return Http.get<EntriesResponse>(Endpoints.get(ApiEndpoints.list), { params });
+    return Http().get<EntriesResponse>(Endpoints().get(ApiEndpoints.list), { params });
   }
 };

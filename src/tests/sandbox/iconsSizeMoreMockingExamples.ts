@@ -1,4 +1,4 @@
-import iconsSize from '@/composables/iconsSize';
+import iconsSize from '@/composables/iconsSize/iconsSize';
 import { useDisplay } from 'vuetify';
 import type { Mock } from 'vitest';
 import { ref } from 'vue';

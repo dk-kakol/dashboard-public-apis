@@ -21,5 +21,4 @@ describe('About View', () => {
 
     expect(title.text()).toBe('Elo from About View!');
   });
-
 });

@@ -17,27 +17,27 @@ const meta: Meta<typeof PaginationAtom> = {
       v-bind="args"
       v-model="currentPage"></PaginationAtom>
     `
-  }),
-}
+  })
+};
 
 export default meta;
-type Story = StoryObj<typeof PaginationAtom>
+type Story = StoryObj<typeof PaginationAtom>;
 
-export const DefaultPagination: Story = {}
+export const DefaultPagination: Story = {};
 
 export const PaginationWithArgs: Story = {
   args: {
     disabled: false,
     length: 3,
-    totalVisible: 3,
+    totalVisible: 3
   }
-}
+};
 
 export const PaginationWithLargeAmountOfPages: Story = {
   args: {
     disabled: false,
     length: 100,
     totalVisible: 6,
-    modelValue: 7,
+    modelValue: 7
   }
-}
+};

@@ -48,7 +48,7 @@ import type { IconSize } from '@/types';
 import type { NavigationDrawerListItem } from '@/types';
 import type { ThemeName } from '@/types';
 
-import iconsSize from '@/composables/iconsSize';
+import iconsSize from '@/composables/iconsSize/iconsSize';
 
 const defaultSize: IconSize = iconsSize();
 

@@ -1,4 +1,4 @@
-import iconsSize from '@/composables/iconsSize';
+import iconsSize from '@/composables/iconsSize/iconsSize';
 
 beforeEach(() => {
   vi.restoreAllMocks();

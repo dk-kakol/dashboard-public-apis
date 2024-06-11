@@ -1,14 +1,15 @@
 import { z } from 'zod';
+import { authSchema, corsSchema, categorySchema } from '@/services/http/schemas/resources';
 
 export const entrySchema = z.object({
   id: z.string(),
   API: z.string(),
   Description: z.string(),
-  Auth: z.enum(['apiKey', '', 'OAuth', 'User-Agent', 'X-Mashape-Key']),
+  Auth: authSchema,
   HTTPS: z.boolean(),
-  Cors: z.enum(['no', 'unknown', 'unkown', 'yes']),
+  Cors: corsSchema,
   Link: z.string(),
-  Category: z.string()
+  Category: categorySchema
 });
 
 export const entriesSchema = z.array(entrySchema);

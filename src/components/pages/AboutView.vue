@@ -28,6 +28,7 @@ import { useI18n } from 'vue-i18n';
 import { ref } from 'vue';
 import DefaultTemplate from '@/components/templates/DefaultTemplate.vue';
 import PaginationAtom from '@/components/atoms/pagination/PaginationAtom.vue';
+import useResourcesStore from '@/stores/resources/resources';
 
 // const { t, tm, rt, locale } = useI18n({
 const { t, tm, rt } = useI18n({
@@ -44,6 +45,8 @@ const secondTestArray: string[] = tm('template.secondTestArray');
 
 const currentPagination = ref<number>(2);
 
+const resourcesStore = useResourcesStore();
+await resourcesStore.fetchResources();
 // Widok About, zawiera:
 // Opis co to jest
 // Sprawdź czy service jest alive, jeśli nie, to włącz mockowanie requestów,

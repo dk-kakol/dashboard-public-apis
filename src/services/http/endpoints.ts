@@ -1,9 +1,22 @@
 import type { EndpointParams, ApiEndpoints } from '@/types';
 class Endpoints {
+  private static instance: Endpoints;
   apiPrefix: string;
 
   constructor() {
     this.apiPrefix = import.meta.env.VITE_APP_API_URL;
+  }
+
+  /**
+   * The static method that controls the access to the singleton instance.
+   *
+   * @returns {Endpoints} The singleton instance of the Endpoints class.
+   */
+  public static getInstance(): Endpoints {
+    if (!Endpoints.instance) {
+      Endpoints.instance = new Endpoints();
+    }
+    return Endpoints.instance;
   }
 
   get(endpointLabel: ApiEndpoints, params?: EndpointParams): string {
@@ -21,4 +34,4 @@ class Endpoints {
   }
 }
 
-export default new Endpoints();
+export default Endpoints.getInstance;

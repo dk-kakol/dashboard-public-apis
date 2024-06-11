@@ -1,11 +1,13 @@
 import axios from 'axios';
-import type { Axios, AxiosResponse, AxiosRequestConfig } from 'axios';
-import responseInterceptor from '@/composables/responseInterceptor';
+import type { AxiosInstance, AxiosResponse, AxiosRequestConfig } from 'axios';
+import responseInterceptor from '@/composables/responseInterceptor/responseInterceptor';
+
 /**
  * @class Http Class is an axios service for application.
  */
 class Http {
-  axios: Axios;
+  private static instance: Http;
+  axios: AxiosInstance;
 
   constructor() {
     this.axios = axios.create({
@@ -18,6 +20,25 @@ class Http {
       (response: AxiosResponse): AxiosResponse => response,
       responseInterceptor
     );
+  }
+
+  /**
+   * The static method that controls the access to the singleton instance.
+   *
+   * @returns {Http} The singleton instance of the Http class.
+   */
+  public static getInstance(): Http {
+    if (!Http.instance) {
+      Http.instance = new Http();
+    }
+    return Http.instance;
+  }
+
+  /**
+   * @returns The `axios` instance is being returned.
+   */
+  getAxiosInstance(): AxiosInstance {
+    return this.axios;
   }
 
   /**
@@ -52,4 +73,4 @@ class Http {
   }
 }
 
-export default new Http();
+export default Http.getInstance;

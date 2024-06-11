@@ -1,6 +1,6 @@
 import { createWrapper, flushPromises, nextTick, type VueWrapper } from '@/tests/utils';
 import HomeView from '@/components/pages/home/HomeView.vue';
-import useApisStore from '@/stores/apis';
+import useApisStore from '@/stores/apis/apis';
 
 let wrapper: VueWrapper;
 let currentComponent: Omit<VueWrapper<any>, 'exists'>;

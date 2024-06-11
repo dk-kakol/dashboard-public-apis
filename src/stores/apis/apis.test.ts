@@ -1,6 +1,5 @@
 import { setActivePinia, createPinia } from 'pinia';
-// import { createTestingPinia } from '@pinia/testing';
-import useApisStore from '@/stores/apis';
+import useApisStore from '@/stores/apis/apis';
 import publicApis from '@/services/http/api/publicApis';
 import { entriesResponseSchema } from '@/services/http/schemas/entries';
 

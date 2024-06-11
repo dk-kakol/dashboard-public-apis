@@ -1,5 +1,5 @@
 import { defineComponent } from 'vue';
-import iconsSize from '@/composables/iconsSize';
+import iconsSize from '@/composables/iconsSize/iconsSize';
 import { useDisplay } from 'vuetify';
 import { createWrapper } from '@/tests/utils';
 

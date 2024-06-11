@@ -1,9 +1,21 @@
 https://api.publicapis.org/
 https://pictogrammers.com/library/mdi/
 <!-- Co zrobię dziś/jutro: -->
-Filtrowanie (resourcy i kolejne endpointy zrobię z composablem (patrz resource na swd))
+Filtrowanie (resourcy i kolejne endpointy zrobię z composablem (patrz resource na swd)):
+
++nowy composable/serwis na wysyłkę requestów (z użyciem vue-use) +unit testy
++store na resourcy (+unit testy)
+-przeczytać i przekmninić vee-validate
+-Atom inputa (testy + storybook)
+-Atom Selecta (testy + storybook)
+-Molekuła FormInpu: atom inputa z walidacją (testy + storybook)
+-Molekuła FormSelect: atom selecta z walidacją (testy + storybook)
+-Molekuła filtrów (test + storybook)
+-Wstawić filtry do Organizmu listy (+ updejt test i storybook)
+-obsługa filtrów w storze pobierania public apis (+unit testy)
 
 <!-- Co zrobię pojutrze: -->
+Upgrejd yarn
 Storybook todo:
 - uzupełnić storybook dla komponentów które ich nie mają
 - opublikować storybook w chromecast?
@@ -17,19 +29,27 @@ CR i fixy
 Zrobienie drugiego posprzątanego projektu w gh pokazowego
 
 Ew. dalszy rozwój projektu:
-a) autoryzacja i authentykacja
-b) websockety? https://www.udemy.com/course/angular-2-and-nodejs-the-practical-guide/learn/lecture/10523172#questions/11161631/
+- autoryzacja i authentykacja
+- websockety? https://www.udemy.com/course/angular-2-and-nodejs-the-practical-guide/learn/lecture/10523172#questions/11161631/
 https://blog.logrocket.com/build-real-time-vue-app-websockets/
-c) image upload (+ może obróbka?) do zakładania konta
-e) pokminić animacje i technologie kreatywne: GSAP, ThreeJS, Framer Motion, PixiJS, WebGL
+- image upload (+ może obróbka?) do zakładania konta
+- dodać jakieś tradycyjne transition?
+- pokminić animacje i technologie kreatywne: GSAP, ThreeJS, Framer Motion, PixiJS, WebGL
 (patrz https://p-programisci.pl/)
-f) wariacja na temat nuxt 
-g) Jakiś sprytny health check and mock backend if unavailable
-h) zakładanie konta,
-i) formularz dodawania public apis
-j) panel admina do sterowania kontami
-k) nadawanie uprawnien przez admina
-l) potwierdzanie konta (wysyłka maila)
+- narzędzia typu: https://www.tabnine.com/, https://www.sonarsource.com?
+- dodać sentry
+- dodać dependabota
+- wariacja na temat nuxt
+- gtm i analytics? 
+- vite bundle analyzer?
+- pug?
+- dodać cypressa?
+- zakładanie konta,
+- formularz dodawania public apis
+- panel admina do sterowania kontami
+- nadawanie uprawnien przez admina
+- potwierdzanie konta (wysyłka maila)
+- Jakiś sprytny health check and mock backend if unavailable
 
 Backend - opis funkcjonalności:
 -autentykacja
@@ -76,7 +96,7 @@ Jak będziesz potrzebował pierwornych plików to masz projekt test z postawiony
 Pinia:
 Router:
 Vee-validate:
-Yup:)
+Zod:)
 
 2, Czy jest git responsywny?
 (Ma się dobrze wyświetlać od 300px)
@@ -138,22 +158,11 @@ https://storybook.js.org/ (czy może współgrać z cypressem?)
 z.nativeEnum(MyEnum) umożliwia użycie wprost jakiegoś enuma, ale ma minus że żeby przypisać do property 
 musisz użyć tego enuma MyEnum.val. Uporządkować/udokumentować schemę Entry którą wersję przyjąć
 -obsługa 429 too many requests w public apis
-- ładniejsza nazwa kontenera niż vite_docker
 - helper function na znajdowanie data-tests
 -zacnie zrobione komponenty Ikonek OldIcon ze względu na prostotę sterowania kolorem, choć może można by zrobić je jeszcze zacniej ;) Stwórz komponenty ikonek biorąc najlepsze doświadczenia stąd i z dotychczasowych projektów i z vuetifajowych ikonek
--dodać theme do vuetify
--konfiguracja eslinta, czy coś zmieniamy
--co można zrobić z prettier
--na końcu dependabota
--dodanie i konfiguracja Sentry?
--ogarnąć ładne Readmi
--pouczyć się pug
--możesz sobie poćwiczyć transition
--możesz przeglądnać dokumentację Vue, Pinii, Routera, Vue test utils, Storybooka, Typescripta czy jest jakiś ficzer który jeszcze chcesz dodać/obsłużyć żeby mieć przykład na przyszłość
 -z useI18n można wyciągnąć wszystko z Composer Instance
 // const { t, d, n, tm, locale, availableLocales, getLocaleMessages } = useI18n();
-- na koniec możesz pomyśleć o dodaniu różnych funkcji z vue-i18n, np:
-typescript support, date and number formatting, pluralization (tc w legacy, teraz t), lazy loading, przykład znaku specjalnego, przykład linked messages, built-in modifiers, literal interpolation na znaki specjalne
+
 <!--  -->
 # dashboard-public-api
 

@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 import type { IconSize } from '@/types';
-import iconsSize from '@/composables/iconsSize';
+import iconsSize from '@/composables/iconsSize/iconsSize';
 
 const defaultSize: IconSize = iconsSize();
 

@@ -10,7 +10,7 @@
 import DefaultTemplate from '@/components/templates/DefaultTemplate.vue';
 import PublicApisList from '@/components/organisms/publicApisList/PublicApisList.vue';
 import { watch } from 'vue';
-import useApisStore from '@/stores/apis';
+import useApisStore from '@/stores/apis/apis';
 import { storeToRefs } from 'pinia';
 
 const apisStore = useApisStore();
