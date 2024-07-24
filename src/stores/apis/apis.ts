@@ -2,9 +2,10 @@ import { defineStore } from 'pinia';
 import { ref, computed } from 'vue';
 import type { Entries, FetchApisParams } from '@/types';
 import publicApis from '@/services/http/api/publicApis';
-import { entriesResponseSchema } from '@/services/http/schemas/entries';
+import { entriesResponseSchema } from '@/schemas';
+import { useApisFiltersStore } from '@/stores';
 
-const useApisStore = defineStore('apisStore', () => {
+export const useApisStore = defineStore('apisStore', () => {
   const currentPage = ref<number>(1);
 
   const entriesPerPage = ref<number>(20);
@@ -20,12 +21,19 @@ const useApisStore = defineStore('apisStore', () => {
 
   const loading = ref<boolean>(false);
 
+  const apisFilters = useApisFiltersStore();
+
   const fetchApis = async () => {
     loading.value = true;
     try {
+      const { search, category, auth, cors } = apisFilters.getApisFilters;
       const params: FetchApisParams = {
         offset: (currentPage.value - 1) * entriesPerPage.value,
-        limit: entriesPerPage.value
+        limit: entriesPerPage.value,
+        search,
+        category,
+        auth,
+        cors
       };
       const response = await publicApis.fetchList(params);
       await entriesResponseSchema.parse(response.data);
@@ -64,5 +72,3 @@ const useApisStore = defineStore('apisStore', () => {
     fetchApis
   };
 });
-
-export default useApisStore;

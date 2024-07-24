@@ -7,3 +7,4 @@ export * from '@/types/frontend/icon';
 export * from '@/types/frontend/pagination';
 export * from '@/types/frontend/loader';
 export * from '@/types/frontend/helpers';
+export * from '@/types/frontend/form';

@@ -1,4 +1,5 @@
 <template>
+  <PublicApisFilters @filter="onFilter" data-test="o-publicApisList__filters"></PublicApisFilters>
   <LoaderAtom
     :loading="props.loading"
     :type="['text']"
@@ -23,12 +24,15 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
+import { useDisplay } from 'vuetify';
+
+import PublicApisFilters from '@/components/organisms/publicApisFilters/PublicApisFilters.vue';
 import PublicApisTable from '@/components/molecules/publicApisTable/PublicApisTable.vue';
 import PaginationAtom from '@/components/atoms/pagination/PaginationAtom.vue';
 import LoaderAtom from '@/components/atoms/loader/LoaderAtom.vue';
+
 import type { Entries } from '@/types';
-import { computed } from 'vue';
-import { useDisplay } from 'vuetify';
 
 type Props = {
   apis: Entries;
@@ -41,4 +45,13 @@ const currentPage = defineModel<number>('currentPage');
 const { smAndUp } = useDisplay();
 const totalVisible = computed<number>(() => (smAndUp.value ? 6 : 3));
 const density = computed<string>(() => (smAndUp.value ? 'default' : 'compact'));
+
+type Emits = {
+  (e: 'filter'): void;
+};
+const emit = defineEmits<Emits>();
+
+const onFilter = function () {
+  emit('filter');
+};
 </script>

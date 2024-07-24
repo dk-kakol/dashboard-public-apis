@@ -4,6 +4,7 @@ import vuetify from '@/plugins/vuetify';
 import i18n from '@/plugins/i18n';
 import router from '@/router';
 import { createPinia } from 'pinia';
+import '@/plugins/vee-validate';
 import initDirectives from '@/directives';
 import { withVuetifyTheme } from './withVuetifyTheme.decorator';
 

@@ -44,6 +44,9 @@ export default <Params, Data>(
         'router-view': true,
         'expand-transition': {
           template: '<div><slot /></div>'
+        },
+        SlideYTransition: {
+          template: '<div><slot /></div>'
         }
       },
       directives: {

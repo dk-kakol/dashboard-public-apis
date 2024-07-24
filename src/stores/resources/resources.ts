@@ -9,7 +9,7 @@ import type {
   PermissionResources
 } from '@/types';
 
-const useResourcesStore = defineStore('resources', () => {
+export const useResourcesStore = defineStore('resources', () => {
   const {
     parsedData: getResources,
     execute: fetchResources,
@@ -38,5 +38,3 @@ const useResourcesStore = defineStore('resources', () => {
     fetchResources
   };
 });
-
-export default useResourcesStore;

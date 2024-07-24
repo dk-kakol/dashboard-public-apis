@@ -13,7 +13,7 @@ import type {
   permissionResourceSchema,
   permissionResourcesSchema,
   resourcesSchema
-} from '@/services/http/schemas/resources';
+} from '@/schemas';
 
 export type Auth = z.infer<typeof authSchema>;
 

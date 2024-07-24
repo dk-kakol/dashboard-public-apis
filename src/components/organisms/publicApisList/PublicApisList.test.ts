@@ -36,6 +36,21 @@ beforeEach(() => {
   });
 });
 describe('PublicApisList', () => {
+  it('should render filter section', () => {
+    const filters = wrapper.find('[data-test="o-publicApisList__filters"]');
+
+    expect(filters.exists()).toBe(true);
+  });
+
+  it('should emit filter event, when user click filter button', async () => {
+    const filters = wrapper.getComponent<DefineComponent>(
+      '[data-test="o-publicApisList__filters"]'
+    );
+    filters.vm.$emit('filter');
+    const publicApisList = wrapper.findComponent({ name: 'PublicApisList' });
+    expect(publicApisList.emitted('filter')).toBeTruthy();
+  });
+
   it('shoud render table for public apis items when loading is false', () => {
     const table = wrapper.find('[data-test="o-publicApisList__table"]');
 

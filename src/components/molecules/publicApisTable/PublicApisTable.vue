@@ -111,7 +111,7 @@ const formatKey = function (key: string): string {
 </script>
 
 <style lang="scss">
-@use '@/assets/vuetify/settings.scss';
+@use '@/assets/vuetify/settings';
 @use 'sass:map';
 
 .m-publicApisTable {

@@ -1,7 +1,7 @@
 version: "3.4"
 services:
  dashboard-public-apis:
-   image: node:lts
+   image: node:lts-alpine
    container_name: dashboard-public-apis
    entrypoint: /bin/sh
    ports:

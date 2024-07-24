@@ -1,25 +1,12 @@
 https://api.publicapis.org/
 https://pictogrammers.com/library/mdi/
 <!-- Co zrobię dziś/jutro: -->
-Filtrowanie (resourcy i kolejne endpointy zrobię z composablem (patrz resource na swd)):
-
-+nowy composable/serwis na wysyłkę requestów (z użyciem vue-use) +unit testy
-+store na resourcy (+unit testy)
--przeczytać i przekmninić vee-validate
--Atom inputa (testy + storybook)
--Atom Selecta (testy + storybook)
--Molekuła FormInpu: atom inputa z walidacją (testy + storybook)
--Molekuła FormSelect: atom selecta z walidacją (testy + storybook)
--Molekuła filtrów (test + storybook)
--Wstawić filtry do Organizmu listy (+ updejt test i storybook)
--obsługa filtrów w storze pobierania public apis (+unit testy)
-
+Trza zakomitować pracę (ew type checki, linty, warningi) + weryfikacja
 <!-- Co zrobię pojutrze: -->
-Upgrejd yarn
+Upgrejd yarn?
 Storybook todo:
-- uzupełnić storybook dla komponentów które ich nie mają
+- pokminić z vue-router, bo gdy dodaje ten plugin do storybooka to ButtonAtom się wywala (https://storybook.js.org/addons/storybook-vue3-router ?)
 - opublikować storybook w chromecast?
-- pokminić z vue-router, bo gdy dodaje ten plugin do storybooka to ButtonAtom się wywala
 About Page - opisać technologie i health check (opis technologii za pomocą AI)
 Update readme
 Deploy
@@ -38,7 +25,6 @@ https://blog.logrocket.com/build-real-time-vue-app-websockets/
 (patrz https://p-programisci.pl/)
 - narzędzia typu: https://www.tabnine.com/, https://www.sonarsource.com?
 - dodać sentry
-- dodać dependabota
 - wariacja na temat nuxt
 - gtm i analytics? 
 - vite bundle analyzer?
@@ -49,7 +35,6 @@ https://blog.logrocket.com/build-real-time-vue-app-websockets/
 - panel admina do sterowania kontami
 - nadawanie uprawnien przez admina
 - potwierdzanie konta (wysyłka maila)
-- Jakiś sprytny health check and mock backend if unavailable
 
 Backend - opis funkcjonalności:
 -autentykacja

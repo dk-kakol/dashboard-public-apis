@@ -1,0 +1,83 @@
+{
+  "errors": {
+    "invalidType": "Oczekiwano {expected}, otrzymano {received}",
+    "invalidTypeReceivedUndefined": "Obowiązkowe",
+    "invalidLiteral": "Nieprawidłowa wartość, oczekiwano {expected}",
+    "unrecognizedKeys": "Nieznane klucze {keys}",
+    "invalidUnion": "Nieprawidłowa wartość",
+    "invalidUnionDiscriminator": "Nieprawidłowa wartość dyskryminatora. Oczekiwano {options}",
+    "invalidEnumValue": "Nieprawidłowa opcja. Oczekiwano: {options}",
+    "invalidArguments": "Nieprawidłowe parametry funkcji",
+    "invalidReturnType": "Nieprawidłowa wartość zwrócona przez funkcję",
+    "invalidDate": "Nieprawidłowa data",
+    "custom": "Nieprawidłowa wartość",
+    "invalidIntersectionTypes": "Nie można połączyć wyników przecięcia",
+    "notMultipleOf": "Liczba musi być wielokrotnością {multipleOf}",
+    "notFinite": "Liczba musi być skończona",
+    "invalidString": {
+      "email": "Nieprawidłowy {validation}",
+      "url": "Nieprawidłowy {validation}",
+      "uuid": "Nieprawidłowy {validation}",
+      "cuid": "Nieprawidłowy {validation}",
+      "regex": "Nieprawidłowa wartość",
+      "datetime": "Nieprawidłowy {validation}",
+      "startsWith": "Nieprawidłowa wartość: musi zaczynać się od {startsWith}",
+      "endsWith": "Nieprawidłowa wartość: musi kończyć się na {endsWith}"
+    },
+    "tooSmall": {
+      "array": {
+        "exact": "Wprowadź {minimum} elementów",
+        "inclusive": "Wprowadź co najmniej {minimum} elementów",
+        "notInclusive": "Wprowadź więcej niż {minimum} elementów"
+      },
+      "string": {
+        "exact": "Długość musi wynosić {minimum} znaków",
+        "inclusive": "Minimalna długość {minimum} znaków",
+        "notInclusive": "Wprowadź więcej niż {minimum} znaków"
+      },
+      "number": {
+        "exact": "Wartość musi wynosić {minimum}",
+        "inclusive": "Wprowadź wartość większą lub równą {minimum}",
+        "notInclusive": "Wprowadź wartość większą niż {minimum}"
+      },
+      "set": {
+        "exact": "Nieprawidłowa wartość",
+        "inclusive": "Nieprawidłowa wartość",
+        "notInclusive": "Nieprawidłowa wartość"
+      },
+      "date": {
+        "exact": "Data musi być {minimum}",
+        "inclusive": "Data musi być późniejsza lub równa {minimum}",
+        "notInclusive": "Data musi być późniejsza niż {minimum}"
+      }
+    },
+    "tooBig": {
+      "array": {
+        "exact": "Wprowadź {maximum} elementów",
+        "inclusive": "Wprowadź maksymalnie {maximum} elementów",
+        "notInclusive": "Wprowadź mniej niż {maximum} elementów"
+      },
+      "string": {
+        "exact": "Długość musi wynosić {minimum} znaków",
+        "inclusive": "Maksymalna długość {maximum} znaków",
+        "notInclusive": "Wprowadź mniej niż {maximum} znaków"
+      },
+      "number": {
+        "exact": "Wartość musi wynosić {maximum}",
+        "inclusive": "Wprowadź wartość mniejszą lub równą {maximum}",
+        "notInclusive": "Wprowadź wartość mniejszą niż {maximum}"
+      },
+      "set": {
+        "exact": "Nieprawidłowa wartość",
+        "inclusive": "Nieprawidłowa wartość",
+        "notInclusive": "Nieprawidłowa wartość"
+      },
+      "date": {
+        "exact": "Data musi być {maximum}",
+        "inclusive": "Data musi być wcześniejsza lub równa {maximum}",
+        "notInclusive": "Data musi być wcześniejsza niż {maximum}"
+      }
+    }
+  },
+  "excludeSpecial": "Usuń znaki < > ` {'{'} {'}'} {'='}"
+}

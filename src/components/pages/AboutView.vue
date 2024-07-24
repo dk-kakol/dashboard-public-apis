@@ -28,7 +28,7 @@ import { useI18n } from 'vue-i18n';
 import { ref } from 'vue';
 import DefaultTemplate from '@/components/templates/DefaultTemplate.vue';
 import PaginationAtom from '@/components/atoms/pagination/PaginationAtom.vue';
-import useResourcesStore from '@/stores/resources/resources';
+import { useResourcesStore } from '@/stores/resources/resources';
 
 // const { t, tm, rt, locale } = useI18n({
 const { t, tm, rt } = useI18n({

@@ -1,0 +1,13 @@
+{
+  "api": {
+    "title": "Filtry",
+    "filter": "Filtruj",
+    "reset": "Resetuj",
+    "label": {
+      "search": "Wyszukaj",
+      "category": "Kategoria",
+      "auth": "Autoryzacja",
+      "cors": "Cors"
+    }
+  }
+}

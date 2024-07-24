@@ -14,14 +14,14 @@
     <template v-slot:append>
       <ButtonAtom
         icon
-        v-for="locale in $i18n.availableLocales"
-        :key="`locale-${locale}`"
-        @click="$i18n.locale = locale"
-        :variant="$i18n.locale === locale ? 'tonal' : 'text'"
+        v-for="buttonLocale in availableLocales"
+        :key="`locale-${buttonLocale}`"
+        @click="changeLocale(buttonLocale)"
+        :variant="locale === buttonLocale ? 'tonal' : 'text'"
         :size="defaultSize"
         data-test="o-header__localeButton"
       >
-        {{ locale }}
+        {{ buttonLocale }}
       </ButtonAtom>
       <ButtonAtom @click="toggleTheme" icon>
         <IconAtom icon="mdi-theme-light-dark"></IconAtom>
@@ -44,6 +44,9 @@ import NavigationDrawer from '@/components/molecules/header/NavigationDrawer.vue
 
 import { useTheme } from 'vuetify';
 import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+import { setLocale } from '@vee-validate/i18n';
+
 import type { IconSize } from '@/types';
 import type { NavigationDrawerListItem } from '@/types';
 import type { ThemeName } from '@/types';
@@ -60,4 +63,13 @@ const items = ref<NavigationDrawerListItem[]>([
 ]);
 const toggleTheme = (): ThemeName =>
   (theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark');
+
+const { locale, availableLocales } = useI18n({
+  useScope: 'global'
+});
+
+const changeLocale = async (newLocale: string) => {
+  locale.value = newLocale;
+  setLocale(newLocale);
+};
 </script>

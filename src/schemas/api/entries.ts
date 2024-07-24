@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { authSchema, corsSchema, categorySchema } from '@/services/http/schemas/resources';
+import { authSchema, corsSchema, categorySchema } from '@/schemas';
 
 export const entrySchema = z.object({
   id: z.string(),
@@ -11,6 +11,8 @@ export const entrySchema = z.object({
   Link: z.string(),
   Category: categorySchema
 });
+
+export const entryKeySchema = entrySchema.keyof();
 
 export const entriesSchema = z.array(entrySchema);
 

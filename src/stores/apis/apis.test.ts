@@ -1,9 +1,17 @@
 import { setActivePinia, createPinia } from 'pinia';
-import useApisStore from '@/stores/apis/apis';
+import { useApisStore, useApisFiltersStore } from '@/stores';
 import publicApis from '@/services/http/api/publicApis';
-import { entriesResponseSchema } from '@/services/http/schemas/entries';
+import { entriesResponseSchema } from '@/schemas';
 
 let apisStore: ReturnType<typeof useApisStore>;
+
+vi.mock('vue-i18n', () => ({
+  useI18n: () => ({
+    t: (key: string) => key,
+    d: (key: string) => key,
+    locale: (key: string) => key
+  })
+}));
 
 describe('Apis Store', () => {
   beforeEach(() => {
@@ -37,9 +45,17 @@ describe('Apis Store', () => {
     const publicApisSpyOn = vi.spyOn(publicApis, 'fetchList');
 
     await apisStore.fetchApis();
-
+    const apisFilters = useApisFiltersStore();
+    const { search, category, auth, cors } = apisFilters.getApisFilters;
     expect(publicApisSpyOn).toHaveBeenCalledOnce();
-    expect(publicApisSpyOn).toHaveBeenCalledWith({ offset: 0, limit: apisStore.entriesPerPage });
+    expect(publicApisSpyOn).toHaveBeenCalledWith({
+      offset: 0,
+      limit: apisStore.entriesPerPage,
+      search,
+      category,
+      auth,
+      cors
+    });
   });
 
   it('fetchApis action should validate response', async () => {

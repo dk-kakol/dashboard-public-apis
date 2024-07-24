@@ -1,7 +1,7 @@
 import type { Mock } from 'vitest';
 import { ref } from 'vue';
 import { setActivePinia, createPinia } from 'pinia';
-import useResourcesStore from '@/stores/resources/resources';
+import { useResourcesStore } from '@/stores/resources/resources';
 import resources from '@/services/http/api/resources';
 
 let resourcesStore: ReturnType<typeof useResourcesStore>;

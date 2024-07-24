@@ -2,7 +2,9 @@
   <div>
     <HeaderOrganism></HeaderOrganism>
     <v-main>
-      <slot name="body"></slot>
+      <v-container fluid>
+        <slot name="body"></slot>
+      </v-container>
     </v-main>
   </div>
 </template>

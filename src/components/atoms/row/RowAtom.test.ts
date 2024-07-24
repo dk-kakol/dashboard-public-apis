@@ -35,6 +35,7 @@ describe('Row Atom', () => {
     await wrapper.setProps({
       ...propsToCheck
     });
+    console.log(wrapper.html());
     const rowElement = wrapper.getComponent('[data-test="a-rowAtom"]');
 
     expectedClasses.forEach((value) => expect(rowElement.classes()).includes(value));

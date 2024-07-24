@@ -1,5 +1,5 @@
 <template>
-  <v-icon v-bind="$attrs" :size="props.size ?? defaultSize"></v-icon>
+  <v-icon v-bind="$attrs" :size="props.size ?? defaultSize" :icon="icon"></v-icon>
 </template>
 
 <script setup lang="ts">
@@ -10,6 +10,8 @@ const defaultSize: IconSize = iconsSize();
 
 interface Props {
   size?: string | number;
+  /** mdi- plus icon name from https://pictogrammers.com/library/mdi/ */
+  icon: string;
 }
 const props = defineProps<Props>();
 </script>

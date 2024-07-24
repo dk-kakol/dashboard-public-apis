@@ -1,6 +1,12 @@
-import { createWrapper, flushPromises, nextTick, type VueWrapper } from '@/tests/utils';
+import {
+  createWrapper,
+  flushPromises,
+  nextTick,
+  type VueWrapper,
+  type DefineComponent
+} from '@/tests/utils';
 import HomeView from '@/components/pages/home/HomeView.vue';
-import useApisStore from '@/stores/apis/apis';
+import { useApisStore } from '@/stores';
 
 let wrapper: VueWrapper;
 let currentComponent: Omit<VueWrapper<any>, 'exists'>;
@@ -56,5 +62,42 @@ describe('Home View', () => {
     await secondPageButton.trigger('click');
 
     expect(apisStore.fetchApis).toHaveBeenCalledTimes(2);
+  });
+
+  it('should call fetchApis (with correct params) on users filtering', async () => {
+    const apisStore = useApisStore();
+
+    const publicApisList = wrapper.getComponent<DefineComponent>({ name: 'PublicApisList' });
+    publicApisList.vm.$emit('filter');
+    await flushPromises();
+
+    // first call initially and second after filter event income
+    expect(apisStore.fetchApis).toHaveBeenCalledTimes(2);
+  });
+
+  it('should display error and dont send request on invalid filters', async () => {
+    const apisStore = useApisStore();
+
+    // open filters
+    const filterExpansionPanelButton = wrapper
+      .find('[data-test="o-publicApisList__filters"]')
+      .find('button');
+    await filterExpansionPanelButton.trigger('click');
+
+    // set invalid value in search field
+    const testValue = 'Invalid Input with special character <';
+    await wrapper
+      .find('[data-test="o-publicApisFilters__search"]')
+      .find('input')
+      .setValue(testValue);
+    await flushPromises();
+
+    // emit filter
+    const publicApisList = wrapper.getComponent<DefineComponent>({ name: 'PublicApisList' });
+    publicApisList.vm.$emit('filter');
+    await flushPromises();
+
+    // fetch apis call only initially before filter event occured
+    expect(apisStore.fetchApis).toHaveBeenCalledTimes(1);
   });
 });

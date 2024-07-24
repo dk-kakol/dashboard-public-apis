@@ -6,7 +6,7 @@ let wrapper: VueWrapper;
 beforeAll(() => {
   wrapper = createWrapper(NavigationDrawer, {
     props: {
-      value: true,
+      modelValue: true,
       items: [
         { title: 'template.menu.aboutTitle', route: '/eloRoute' },
         { title: 'template.menu.homeTitle', route: '/eloRoute2' }

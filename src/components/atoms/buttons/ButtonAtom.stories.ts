@@ -16,3 +16,11 @@ export const ButtonWithSlot: Story = {
     default: 'test'
   }
 };
+
+export const ElevateAndComfortableButton: Story = {
+  args: {
+    variant: 'elevated',
+    default: 'test',
+    density: 'comfortable'
+  }
+};

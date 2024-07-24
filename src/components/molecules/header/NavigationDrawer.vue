@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer :value="$attrs.value" temporary width="110">
+  <v-navigation-drawer v-model="value" temporary width="110">
     <v-list nav density="compact">
       <v-list-item
         v-for="item in props.items"
@@ -20,12 +20,14 @@ interface Props {
   items: NavigationDrawerListItem[];
 }
 const props = defineProps<Props>();
+
+const value = defineModel<boolean>();
 </script>
 
 <style lang="scss" scoped>
 .m-navigationDrawer__listItem {
   &.-overwritePadding {
-    padding-inline: 6px 6px;
+    padding-inline: 6px;
   }
 }
 </style>
