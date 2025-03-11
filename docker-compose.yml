@@ -1,0 +1,20 @@
+services:
+  # used as terminal tool
+  node-dashboard-public-apis:
+    build:
+      context: .
+      dockerfile: .docker/node-dashboard-public-apis/Dockerfile
+    container_name: node-dashboard-public-apis
+    user: ${UID}:${GID}
+    volumes:
+      - .:/app
+    ports:
+      - '7000:7000'
+  node-ap-debug:
+    build:
+      context: .
+      dockerfile: .docker/node-dashboard-public-apis/Dockerfile
+    container_name: node-dashboard-public-apis-debug
+    user: ${UID}:${GID}
+    ports:
+      - '7000:7000'
