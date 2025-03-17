@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+yarn type-check
+yarn lint
+npx stylelint "**/*.{scss,vue}" --fix
+yarn format
+yarn test:unit

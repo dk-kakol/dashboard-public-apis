@@ -1,0 +1,162 @@
+{
+  "titleSection": {
+    "title": "Vue Front-End Developer ",
+    "subheader": {
+      "beforeSpan": "Tworzenie Wydajnych, ",
+      "spanText": " Wizualnie ",
+      "afterSpan": "Atrakcyjnych Aplikacji"
+    },
+    "navigation": {
+      "aboutMe": "O Mnie",
+      "projects": "O Projekcie",
+      "process": "Tworzenie Treści",
+      "contact": "Kontakt"
+    }
+  },
+  "aboutMe": {
+    "info": [
+      "Moja kariera w branży IT rozpoczęła się od zapewniania jakości oprogramowania, a obecnie z powodzeniem rozwijam się jako front-end developer. Na początku skupiałem się na testowaniu i niezawodności systemów, co pozwoliło mi zdobyć unikalną perspektywę w tworzeniu oprogramowania – łączącą funkcjonalność z doskonałym doświadczeniem użytkownika.",
+      "W pracy stawiam na współpracę i ciągły rozwój. Zarówno w zespole Scrum, jak i podczas samodzielnych działań, zawsze dążę do tego, aby dostarczać wartość w każdym projekcie. Moją misją jest tworzenie produktów, które nie tylko spełniają, ale wręcz przewyższają oczekiwania użytkowników.",
+      "Mam bogate doświadczenie w budowaniu i utrzymywaniu aplikacji opartych na Vue.js. Pracowałem zarówno nad refaktoryzacją starszych kodów, jak i nad tworzeniem od podstaw responsywnych aplikacji jednostronicowych (SPA). Miałem okazję odegrać kluczową rolę w migracji złożonej aplikacji z Vue 2 do Vue 3 oraz w stworzeniu wewnętrznej biblioteki komponentów Vue usprawniającej procesy deweloperskie. Na co dzień korzystam z narzędzi takich jak Vue.js, Pinia, JavaScript i TypeScript. Szczególnie cenię projekty, które stawiają przede mną wyzwania, umożliwiając nieustanne poszerzanie moich umiejętności i wiedzy."
+    ]
+  },
+  "aboutProject": {
+    "panels": {
+      "applicationFunctionality": "Funkcjonalności Aplikacji",
+      "additionalFeatures": "Planowane Funkcjonalności",
+      "developmentConventions": "Konwencje Programistyczne",
+      "technologyStack": "Technologie Projektu"
+    },
+    "applicationFunctionality": {
+      "headers": {
+        "MultiLanguage": "Obsługa wielu języków:",
+        "DarkMode": "Tryb ciemny:",
+        "UserExperience": "Doświadczenia użytkownika:",
+        "SearchAndFiltering": "Wyszukiwanie i filtrowanie:",
+        "Pagination": "Paginacja:",
+        "ApiData": "Pobieranie danych z API:"
+      },
+      "descriptions": {
+        "MultiLanguage": "Treści dostępne w języku polskim i angielskim dzięki Vue I18n.",
+        "DarkMode": "Możliwość przełączania między jasnym a ciemnym motywem dla lepszego komfortu użytkownika.",
+        "UserExperience": "Intuicyjny design i płynna nawigacja.",
+        "SearchAndFiltering": "Umożliwia łatwe wyszukiwanie i filtrowanie odpowiednich wpisów.",
+        "Pagination": "Rozdziela dane na łatwe do przetworzenia części.",
+        "ApiData": "Pobiera i prezentuje dane z backendowego API."
+      }
+    },
+    "additionalFeatures": [
+      {
+        "title": "Integracja CI/CD",
+        "description": "GitHub Actions zautomatyzuje procesy budowania, testowania i wdrażania."
+      },
+      {
+        "title": "Monitoring Sentry",
+        "description": "Zapewni wgląd w problemy użytkowników w celu szybkiego ich naprawienia."
+      },
+      {
+        "title": "Optymalizacja wydajności",
+        "description": "Używanie optymalizatora pakietów Vite do optymalizacji zasobów."
+      },
+      {
+        "title": "Środki bezpieczeństwa",
+        "description": "Wdrażanie Polityki Bezpieczeństwa Treści (CSP)."
+      },
+      {
+        "title": "Kompleksowe testowanie",
+        "description": "Dążenie do pełnego pokrycia testami za pomocą Vitest i Cypress."
+      },
+      {}
+    ],
+    "developmentConventions": [
+      {
+        "name": "Metodologia ABEM",
+        "description": "Zapewnia spójne i łatwe w utrzymaniu nazewnictwo klas CSS."
+      },
+      {
+        "name": "Spójność Kodu",
+        "description": "Wymuszana za pomocą ESLint i Prettier, co gwarantuje czysty i czytelny kod."
+      },
+      {
+        "name": "Dokumentacja z JSDoc",
+        "description": "Dostarcza przejrzystą, ustandaryzowaną dokumentację, ułatwiając zrozumienie kodu."
+      },
+      {
+        "name": "Responsywny Design",
+        "description": "Gwarantuje użyteczność na różnych urządzeniach."
+      },
+      {
+        "name": "Dostępność",
+        "description": "Priorytetem są standardy zapewniające użyteczność aplikacji dla wszystkich użytkowników."
+      },
+      {
+        "name": "Kontrola Wersji",
+        "description": "Wykorzystuje Git, a regularne przeglądy kodu utrzymują wysoką jakość projektu."
+      }
+    ],
+    "technologyStack": {
+      "Vite": "Narzędzie do tworzenia frontendu nowej generacji.",
+      "VueRouter": "Płynna nawigację dzięki obsłudze routingu po stronie klienta.",
+      "Pinia": "Lekka biblioteka do zarządzania stanem dla Vue.",
+      "Axios": "Elastyczny klient HTTP, idealny do obsługi żądań API.",
+      "VeeValidate": "Narzędzie do walidowania formularzy w Vue.js.",
+      "Zod": "Przyjazne TypeScriptowi deklarowanie schematów i walidacji danych.",
+      "Vuetify": "Komponenty Material Design, zapewniające spójny wygląd aplikacji.",
+      "Vue": "Framework ułatwiający tworzenie dynamicznych interfejsów użytkownika.",
+      "VueI18n": "Rozwiązanie do internacjonalizacji treści aplikacji.",
+      "Storybook": "Narzędzie do tworzenia i dokumentowania komponentów UI w izolacji.",
+      "GSAP": "Biblioteka pozwalająca na tworzenie animacji i efektów.",
+      "VueUse": "Zbiór przydatnych narzędzi i funkcji dla Vue.js.",
+      "Vitest": "Wydajne narzędzie do uruchamiania testów jednostkowych.",
+      "Cypress": "Zaawansowane narzędzie do testów integracyjnych i E2E.",
+      "TresJS": "Integracja Three.js z Vue do tworzenia grafik 3D."
+    }
+  },
+  "contentCreation": {
+    "introduction": "W dzisiejszym szybko zmieniającym się świecie technologii sztuczna inteligencja stała się nieodzownym narzędziem dla programistów. Wykorzystanie AI w codziennych zadaniach nie tylko ułatwia ich realizację, ale jest wręcz konieczne, by pozostać konkurencyjnym na rynku pracy. Narzędzia takie jak ChatGPT czy Copilot usprawniają różne etapy tworzenia oprogramowania – od generowania i ulepszania kodu, po optymalizację treści i poprawę doświadczeń użytkownika podczas używania aplikacji. Przy tworzeniu tej podstrony AI odegrało kluczową rolę, pomagając stworzyć spójną, zrozumiałą i angażującą treść, skierowaną zarówno do rekruterów HR, jak i doświadczonych developerów.",
+    "techniqueNumber": "Technika AI N°",
+    "techniques": [
+      {
+        "name": "Technika drabinkowa do rozkładu zadania",
+        "description": "Proces tworzenia rozpoczął się od podzielenia zadania na mniejsze, łatwiejsze do zarządzania części, co pozwoliło na osobne opracowanie i udoskonalenie każdej sekcji strony. AI pomogła w szczegółowym opisie stosu technologicznego, praktyk programistycznych i funkcjonalnosci."
+      },
+      {
+        "name": "Uwzględnienie perspektywy odbiorców",
+        "description": "Treść została zaprojektowana z myślą o dwóch kluczowych grupach odbiorców – rekruterach HR oraz senior developerach. Położono nacisk na równowagę między techniczną szczegółowością a przystępnością, zapewniając przejrzystość i wartość merytoryczną."
+      },
+      {
+        "name": "Iteracyjne udoskonalanie i uszczegóławianie",
+        "description": "AI wspierało proces wielokrotnego doskonalenia treści. Na każdym etapie uwzględniano uwagi i wprowadzano poprawki, aby uzyskać końcową wersję idealnie dopasowaną do zamierzonego przekazu."
+      },
+      {
+        "name": "Optymalizacja SEO z wykorzystaniem słów kluczowych",
+        "description": "Aby poprawić widoczność strony w wyszukiwarkach, AI pomogło strategicznie umieścić słowa kluczowe, zachowując jednocześnie naturalny i płynny charakter treści."
+      },
+      {
+        "name": "Badania, Analiza i Kreatywność",
+        "description": "AI odegrało kluczową rolę w badaniach, analizie danych oraz generowaniu pomysłów. Od analizowania najlepszych praktyk w pracy z Vue.js, po optymalizację treści pod kątem SEO – narzędzia AI, takie jak Claude Chat, były nieocenionym wsparciem."
+      },
+      {
+        "name": "Generowanie obrazów",
+        "description": "Narzędzia AI zostały także użyte do generowania treści wizualnych, takich jak wizualizacje architektury aplikacji czy komponentów UI, co uzupełniło treść pisemną i zapewniło pełniejszy obraz projektu."
+      }
+    ]
+  },
+  "contactMe": {
+    "links": {
+      "linkedin": {
+        "url": "https://www.linkedin.com/in/kakol-dariusz",
+        "text": "LinkedIn"
+      },
+      "github": {
+        "url": "https://github.com/dk-kakol",
+        "text": "GitHub"
+      },
+      "email": {
+        "url": "mailto:dk.kakol{'@'}o2.pl",
+        "text": "Email"
+      }
+    },
+    "scroll": "Przewiń w dół"
+  }
+}

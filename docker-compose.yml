@@ -9,7 +9,8 @@ services:
     volumes:
       - .:/app
     ports:
-      - '7000:7000'
+      - 7000:7000
+      - 6007:6007
   node-ap-debug:
     build:
       context: .
@@ -17,4 +18,4 @@ services:
     container_name: node-dashboard-public-apis-debug
     user: ${UID}:${GID}
     ports:
-      - '7000:7000'
+      - 7001:7000
