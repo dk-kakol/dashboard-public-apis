@@ -1,0 +1,163 @@
+{
+  "titleSection": {
+    "title": "Vue Front-End Developer",
+    "subheader": {
+      "beforeSpan": "Crafting High-Performance, ",
+      "spanText": " Visually ",
+      "afterSpan": "Appealing Applications"
+    },
+    "navigation": {
+      "aboutMe": "About Me",
+      "projects": "About Project",
+      "process": "Content Creation",
+      "contact": "Contact Me"
+    }
+  },
+  "aboutMe": {
+    "info": [
+      "I’ve evolved from a background in quality assurance to becoming a skilled front-end developer. My journey in tech began with a strong emphasis on testing and system reliability, which has provided me with a unique perspective in software development—balancing both functionality and user experience.",
+      "Collaboration and continuous learning are central to my work ethic. Whether working within a Scrum team or independently, I strive to contribute effectively to every project, ensuring that the end product not only meets but exceeds user expectations.",
+      "My experience spans building and maintaining Vue.js applications, from refactoring legacy codebases to creating responsive Single Page Applications (SPA) from the ground up. Recently, I played a pivotal role in migrating a major application from Vue 2 to Vue 3 and in developing an in-house Vue component library to streamline development processes. My daily toolkit includes Vue.js, Pinia, JavaScript, and TypeScript, and I am particularly drawn to projects that challenge me to continuously expand my technical skills."
+    ]
+  },
+  "aboutProject": {
+    "panels": {
+      "applicationFunctionality": "Application Functionality",
+      "additionalFeatures": "Additional Features",
+      "developmentConventions": "Development Conventions",
+      "technologyStack": "Technology Stack"
+    },
+    "applicationFunctionality": {
+      "headers": {
+        "MultiLanguage": "Multi-Language Support:",
+        "DarkMode": "Dark Mode:",
+        "UserExperience": "User Experience:",
+        "SearchAndFiltering": "Search and Filtering:",
+        "Pagination": "Pagination:",
+        "ApiData": "API Data Retrieval:"
+      },
+      "descriptions": {
+        "MultiLanguage": "Supports Polish and English through Vue I18n.",
+        "DarkMode": "Switch between light and dark themes for better accessibility and user comfort.",
+        "UserExperience": "Prioritizes intuitive design and seamless navigation.",
+        "SearchAndFiltering": "Allows users to find relevant entries easily.",
+        "Pagination": "Breaks down data into manageable chunks.",
+        "ApiData": "Fetches and presents data from a backend API."
+      }
+    },
+    "additionalFeatures": [
+      {
+        "title": "CI/CD Integration",
+        "description": "GitHub Actions will automate the build, testing, and deployment processes."
+      },
+      {
+        "title": "Error Tracking with Sentry",
+        "description": "Will provide insights into user issues for quick fixes."
+      },
+      {
+        "title": "Performance Optimization",
+        "description": "Using Vite bundle optimizer to minimize and optimize assets."
+      },
+      {
+        "title": "Security Measures",
+        "description": "Implementing Content Security Policy (CSP)."
+      },
+      {
+        "title": "Comprehensive Testing",
+        "description": "Aiming for thorough test coverage with Vitest and Cypress."
+      },
+      {}
+    ],
+    "developmentConventions": [
+      {
+        "name": "ABEM Methodology",
+        "description": "For consistent and maintainable CSS class naming."
+      },
+      {
+        "name": "Code Consistency",
+        "description": "Enforced with ESLint and Prettier, ensuring clean and readable code."
+      },
+      {
+        "name": "JSDoc for Documentation",
+        "description": "Provides clear inline documentation for better code understanding."
+      },
+      {
+        "name": "Responsive Design",
+        "description": "Ensures usability across devices."
+      },
+      {
+        "name": "Accessibility",
+        "description": "Prioritizes standards to make the application usable for everyone."
+      },
+      {
+        "name": "Version Control",
+        "description": "Utilizes Git, with regular code reviews to maintain quality."
+      }
+    ],
+    "technologyStack": {
+      "Vite": "A next-generation frontend tooling system.",
+      "VueRouter": "Handles client-side routing for smooth navigation.",
+      "Pinia": "A lightweight state management library for Vue.",
+      "Axios": "A promise-based HTTP client for making requests.",
+      "VeeValidate": "Form validation for Vue.js.",
+      "Zod": "A TypeScript-first schema declaration and validation library.",
+      "Vuetify": "A Vue UI library with beautifully handcrafted Material Design components.",
+      "Vue": "A progressive JavaScript framework for building user interfaces.",
+      "VueI18n": "Internationalization plugin for Vue.js applications.",
+      "Storybook": "A tool for developing UI components in isolation.",
+      "GSAP": "A robust library for animations and transitions.",
+      "VueUse": "Collection of essential Vue Composition Utilities.",
+      "Vitest": "A blazing-fast test runner built for Vite.",
+      "Cypress": "A testing tool for E2E and integration tests.",
+      "TresJS": "Three.js integration for Vue.js applications."
+    }
+  },
+  "contentCreation": {
+    "introduction": "In today’s rapidly evolving tech landscape, AI has become a critical tool for programmers. Incorporating AI into daily workflows is not just advantageous—it’s essential for staying competitive. AI tools like ChatGPT and Copilot streamline various aspects of development, from generating and refining code to optimizing content and enhancing user experience. For this About Page, AI was instrumental in crafting clear, coherent, and well-structured content, tailored to engage both HR recruiters and senior developers.",
+    "techniqueNumber": "AI Technique N°",
+    "techniqueNumberMobile": "AI N°",
+    "techniques": [
+      {
+        "name": "Laddering Technique for Task Breakdown",
+        "description": "The creation process began by deconstructing the task into manageable parts, allowing each section of the page to be developed and refined individually. AI assisted in detailing the technology stack, development practices, and additional features comprehensively."
+      },
+      {
+        "name": "Audience Perspective Consideration",
+        "description": "Given that the audience includes both HR recruiters and senior developers ensured that the content was both technically informative and accessible, balancing depth with clarity."
+      },
+      {
+        "name": "Feedback Iteration and Prompt Refinement",
+        "description": "AI was integral in iteratively refining the content. Feedback was incorporated at each stage, with prompts adjusted to ensure the output aligned with the desired narrative, resulting in a polished final draft."
+      },
+      {
+        "name": "SEO Optimization through Keyword Placement",
+        "description": "To improve the visibility of the page, AI tools were employed to strategically place keywords, enhancing SEO without compromising the natural flow of the content."
+      },
+      {
+        "name": "Brainstorming, Research, and Data Analysis",
+        "description": "AI provided support in brainstorming, researching, and analyzing data, which informed the content creation process. From researching best practices in Vue.js development to optimizing content for search engines, AI tools like Bing Chat played a crucial role."
+      },
+      {
+        "name": "Image Generation",
+        "description": "AI tools were also used to generate visual content, such as representations of the application’s architecture or UI components, complementing the written content and providing a more complete overview of the project."
+      }
+    ]
+  },
+  "contactMe": {
+    "links": {
+      "linkedin": {
+        "url": "https://www.linkedin.com/in/kakol-dariusz",
+        "text": "LinkedIn"
+      },
+      "github": {
+        "url": "https://github.com/dk-kakol",
+        "text": "GitHub"
+      },
+      "email": {
+        "url": "mailto:dk.kakol{'@'}o2.pl",
+        "text": "Email"
+      }
+    },
+    "scroll": "Scroll Down"
+  }
+}
