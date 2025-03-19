@@ -1,0 +1,38 @@
+export type LoaderType =
+  | 'actions'
+  | 'article'
+  | 'paragraph'
+  | 'avatar'
+  | 'button'
+  | 'card'
+  | 'card-avatar'
+  | 'chip'
+  | 'date-picker'
+  | 'date-picker-options'
+  | 'date-picker-days'
+  | 'divider'
+  | 'heading'
+  | 'image'
+  | 'list-item'
+  | 'list-item-avatar'
+  | 'list-item-two-line'
+  | 'list-item-avatar-two-line'
+  | 'list-item-three-line'
+  | 'list-item-avatar-three-line'
+  | 'ossein'
+  | 'paragraph'
+  | 'sentences'
+  | 'subtitle'
+  | 'table'
+  | 'table-heading'
+  | 'table-thead'
+  | 'table-tbody'
+  | 'table-row-divider'
+  | 'table-row'
+  | 'table-tfoot'
+  | 'text'
+
+export type LoaderProps = {
+  type?: LoaderType[]
+  loading?: boolean
+}

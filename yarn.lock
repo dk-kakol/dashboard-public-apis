@@ -2298,6 +2298,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@storybook/addon-links@npm:^8.6.4":
+  version: 8.6.7
+  resolution: "@storybook/addon-links@npm:8.6.7"
+  dependencies:
+    "@storybook/global": "npm:^5.0.0"
+    ts-dedent: "npm:^2.0.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
+    storybook: ^8.6.7
+  peerDependenciesMeta:
+    react:
+      optional: true
+  checksum: 10c0/49a511925db04cfa16d29e99155f6ab702afcf2dfbc7362c8dcee5a17e7d5fbca4411d3e4ef1724da1c2bbdc6b654f3e54a59e9b66752ad9b31efcbd7c387c64
+  languageName: node
+  linkType: hard
+
 "@storybook/addon-measure@npm:8.6.4":
   version: 8.6.4
   resolution: "@storybook/addon-measure@npm:8.6.4"
@@ -4708,6 +4724,7 @@ __metadata:
     "@pinia/testing": "npm:^1.0.0"
     "@storybook/addon-essentials": "npm:^8.6.4"
     "@storybook/addon-interactions": "npm:^8.6.4"
+    "@storybook/addon-links": "npm:^8.6.4"
     "@storybook/addon-onboarding": "npm:^8.6.4"
     "@storybook/blocks": "npm:^8.6.4"
     "@storybook/test": "npm:^8.6.4"
@@ -4747,6 +4764,7 @@ __metadata:
     pinia: "npm:^3.0.1"
     postcss-html: "npm:^1.8.0"
     prettier: "npm:3.5.3"
+    resize-observer-polyfill: "npm:^1.5.1"
     sass: "npm:^1.85.1"
     start-server-and-test: "npm:^2.0.10"
     storybook: "npm:^8.6.4"
@@ -8504,6 +8522,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"resize-observer-polyfill@npm:^1.5.1":
+  version: 1.5.1
+  resolution: "resize-observer-polyfill@npm:1.5.1"
+  checksum: 10c0/5e882475067f0b97dc07e0f37c3e335ac5bc3520d463f777cec7e894bb273eddbfecb857ae668e6fb6881fd6f6bb7148246967172139302da50fa12ea3a15d95
+  languageName: node
+  linkType: hard
+
 "resolve-from@npm:^4.0.0":
   version: 4.0.0
   resolution: "resolve-from@npm:4.0.0"
@@ -10286,8 +10311,8 @@ __metadata:
   linkType: hard
 
 "vuetify@npm:^3.7.15":
-  version: 3.7.15
-  resolution: "vuetify@npm:3.7.15"
+  version: 3.7.16
+  resolution: "vuetify@npm:3.7.16"
   peerDependencies:
     typescript: ">=4.7"
     vite-plugin-vuetify: ">=1.0.0"
@@ -10300,7 +10325,7 @@ __metadata:
       optional: true
     webpack-plugin-vuetify:
       optional: true
-  checksum: 10c0/76e5493cdd8835fab54f34427f70901ee2d17f220f05f76a5610fbee4cfabb9e07dd58198f21548f804025d6eda0b8b5a7e021250c80f9e693d72fa55dab062a
+  checksum: 10c0/786606ad1b6bcc4e33fa164ef8a06845134fad58cbd90bb907822467c34390176a3d1a8458737d066637586f662213444f95e9d818239217b08f8709f3155c1a
   languageName: node
   linkType: hard
 

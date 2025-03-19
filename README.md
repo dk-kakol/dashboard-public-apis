@@ -16,7 +16,9 @@ See [Vite Configuration Reference](https://vite.dev/config/).
 
 ## Project Setup
 
+docker compose up -d --build
 docker compose run --rm node-dashboard-public-apis
+docker compose exec node-dashboard-public-apis yarn storybook
 
 ```sh
 yarn

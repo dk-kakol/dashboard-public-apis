@@ -5,6 +5,7 @@ const config: StorybookConfig = {
   addons: [
     '@storybook/addon-essentials',
     '@storybook/addon-onboarding',
+    '@storybook/addon-links',
     '@chromatic-com/storybook',
     '@storybook/addon-interactions'
   ],
