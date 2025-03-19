@@ -27,7 +27,7 @@ This is my personal **portfolio project**, showcasing my approach to programming
   - Search, filtering, and pagination.
   - A clean and intuitive UI.
   - Multi-language support (Polish & English) via Vue I18n.
-  - Storybook – Every component is documented with Storybook for better visualization and testing. Explore the live Storybook library here: [Storybook Library](https://67cecac7536e9d35b796a09d-utbktymejk.chromatic.com)
+  - Storybook – Every component is documented with Storybook for better visualization and testing. Explore the live Storybook library here: [Storybook Library](https://www.chromatic.com/library?appId=67cecac7536e9d35b796a09d&branch=master)
 - **About Page** – Uses creative technologies like **GSAP** and **THREE.js** to dynamically present me and the project.
 - **Custom Backend** – I developed my own backend for fetching and filtering the API list, ensuring independence from external services. The backend is available here: [Dashboard Public APIs Backend](https://github.com/dk-kakol/dashboard-public-apis-backend).
 
