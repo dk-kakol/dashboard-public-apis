@@ -60,8 +60,8 @@ export const SelectWithOptionsAndSlots = {
         </v-list-item>
       </template>`,
     selection: `
-      <template #selection="{ item: selectionItem }" v-if="args.selection">
-        <p class="font-italic">{{ selectionItem.title }}</p>
+      <template #selection="{ selectionItem }" v-if="$slots.selection">
+        <slot name="selection" v-bind="{ selectionItem }"></slot>
       </template>`
   }
 }
