@@ -69,7 +69,7 @@ export const SelectWithOptionsSlotsRulesAndInitialValue = {
         </v-list-item>
       </template>`,
     selection: `
-      <template #selection="{ item: selectionItem }" v-if="args.selection">
+      <template #selection="{ selectionItem }" v-if="args.selection">
         <p class="font-italic">{{ selectionItem.title }}</p>
       </template>`
   }
