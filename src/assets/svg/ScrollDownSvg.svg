@@ -1,0 +1,16 @@
+<svg width="102" height="55" viewBox="0 0 102 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 101">
+<g class="arrow">
+<path id="Line 28" d="M2 2.10938L51 27.1094" stroke="black" stroke-width="3" stroke-linecap="round"/>
+<path id="Line 29" d="M51.0908 27.1094L100.091 2.10938" stroke="black" stroke-width="3" stroke-linecap="round"/>
+</g>
+<g class="arrow">
+<path id="Line 28_2" d="M2 15L51 40" stroke="black" stroke-width="3" stroke-linecap="round"/>
+<path id="Line 29_2" d="M51.0908 40L100.091 15" stroke="black" stroke-width="3" stroke-linecap="round"/>
+</g>
+<g class="arrow">
+<path id="Line 28_3" d="M2 28L51 53" stroke="black" stroke-width="3" stroke-linecap="round"/>
+<path id="Line 29_3" d="M51.0908 53L100.091 28" stroke="black" stroke-width="3" stroke-linecap="round"/>
+</g>
+</g>
+</svg>

@@ -4,11 +4,11 @@ import en from '@/locales/en/index'
 
 export const messages = {
   pl: {
-    ...pl,
+    ...pl
   },
   en: {
-    ...en,
-  },
+    ...en
+  }
 }
 
 const i18n = createI18n({
@@ -16,7 +16,7 @@ const i18n = createI18n({
   globalInjection: true,
   locale: import.meta.env.VITE_APP_I18N_LOCALE || 'en',
   fallbackLocale: import.meta.env.VITE_APP_I18N_FALLBACK_LOCALE || 'en',
-  messages,
+  messages
 })
 
 export default i18n
