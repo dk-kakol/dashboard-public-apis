@@ -2,7 +2,6 @@
 import { RouterView } from 'vue-router'
 import { watch } from 'vue'
 import { useRoute } from 'vue-router'
-import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import HeaderOrganism from '@/components/organisms/header/HeaderOrganism.vue'
@@ -10,7 +9,6 @@ import HeaderOrganism from '@/components/organisms/header/HeaderOrganism.vue'
 const route = useRoute()
 
 watch(route, () => {
-  gsap.globalTimeline.clear()
   ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
 })
 </script>
