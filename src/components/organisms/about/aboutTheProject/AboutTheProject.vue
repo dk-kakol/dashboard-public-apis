@@ -53,6 +53,7 @@ import { useDisplay } from 'vuetify'
 import { useI18n } from 'vue-i18n'
 import { useElementSize } from '@vueuse/core'
 import { useDebounceFn } from '@vueuse/core'
+import { useWindowScroll } from '@vueuse/core'
 
 import RowAtom from '@/components/atoms/row/RowAtom.vue'
 import ColAtom from '@/components/atoms/col/ColAtom.vue'
@@ -124,11 +125,22 @@ const mobilePanel = ref([0])
 
 const aboutScrollToStore = useAboutScrollToStore()
 const { sections } = aboutScrollToStore
-const { scrollToIsActive } = storeToRefs(aboutScrollToStore)
 
 let horizontalScrollTween: gsap.core.Tween
 const { smAndDown } = useDisplay()
 
+const { directions } = useWindowScroll()
+const lastScrollBottom = ref(false)
+watch(
+  () => [directions.bottom, directions.top],
+  ([bottom, top]) => {
+    if (bottom) {
+      lastScrollBottom.value = true
+    } else if (top) {
+      lastScrollBottom.value = false
+    }
+  }
+)
 const scrollAnimationOnDesktop = () => {
   if (smAndDown.value) return
   const aboutTheProject: HTMLElement | null = document.querySelector('.o-aboutTheProject')
@@ -138,19 +150,11 @@ const scrollAnimationOnDesktop = () => {
     scrollTrigger: {
       trigger: aboutTheProject,
       start: 'top center',
+      end: 'bottom bottom',
       markers: false,
-      scrub: 1,
-      onEnter: () => {
-        // omit animation if user is using main page navigation between sections
-        if (scrollToIsActive.value) return
-        gsap.to(window, {
-          scrollTo: {
-            y: aboutTheProject,
-            offsetY: headerHeight.value
-          },
-          ease: 'expo.inOut',
-          duration: 2
-        })
+      scrub: true,
+      snap: (value) => {
+        return lastScrollBottom.value ? 1 : value
       }
     }
   })
